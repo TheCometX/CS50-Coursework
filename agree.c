@@ -7,6 +7,10 @@ int main()
 
     if (c == 'y')
     {
-        printf(")
+        printf("Agree.\n")
+    }
+    else
+    {
+        printf("Agree.\n")
     }
 }

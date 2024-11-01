@@ -2,10 +2,8 @@
 
 int main()
 {
-    int x = 2;
-    int y = 3;
+    char name[] = "Vini";
+    char h[] = "Hello";
+    char z[] = h + name;
 
-    float z = (float) x / (float) y;
-
-    printf("%.2f\n", z);
 }

@@ -4,6 +4,6 @@ int main()
 {
     int x = 2;
     int y = 3;
-    float z = x / 3;
+    float z = x / y;
     printf("%f\n", z);
 }

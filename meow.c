@@ -5,7 +5,7 @@ int main()
     int i = 3;
     while (i > 3)
     {
-        printf("meow>\n);
+        printf("meow>\n");
         i--;
     }
 }

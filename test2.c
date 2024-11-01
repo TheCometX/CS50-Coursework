@@ -2,8 +2,6 @@
 
 int main()
 {
-    char name[] = "Vini";
-    char h[] = "Hello";
-    char z[] = h + name;
-
+    long long int x = 33 * 23;
+    printf("%lld", x);
 }

@@ -8,10 +8,10 @@ int main()
 
     if (x < y)
     {
-        printf("Y is bigger\n");
+        printf("Y is bigger.\n");
     }
     else
     {
-        printf("X is bigger\n");
+        printf("X is bigger.\n");
     }
 }

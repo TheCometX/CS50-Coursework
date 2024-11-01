@@ -10,8 +10,12 @@ int main()
     {
         printf("Y is bigger.\n");
     }
-    else
+    else if (x > y)
     {
         printf("X is bigger.\n");
+    }
+    else
+    {
+        printf("X is equal to Y.\n")
     }
 }

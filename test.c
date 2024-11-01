@@ -9,7 +9,8 @@ int main()
     {
         printf("%d is smaller than %d", x, y);
     }
-    for (int t = 0; t <= 2; t++)
+    int t = 0;
+    for ( ; t <= 2; t++)
     {
         printf("yes\n");
     }

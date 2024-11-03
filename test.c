@@ -7,9 +7,16 @@ int main(void)
 
     for (int x = height - 1; x > 0; x++)
     {
-        if ()
-        for (int y = )
+        if (x < 7)
         {
+            printf(" ");
+        }
+        else
+        {
+            for (int y = )
+        {
+            
+        }
         }
     }
 }

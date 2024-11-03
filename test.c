@@ -7,7 +7,7 @@ int main(void)
 
     for (int x = height - 1; x > 0; x++)
     {
-
+        if ()
         for (int y = )
         {
         }

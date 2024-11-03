@@ -1,40 +1,27 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <cs50.h>
 
-void spaces(int h);
-void stair(int x);
-
+void stair(int z);
 int main(void)
 {
-    const int height = get_int("What's the height? ");
-    int times = height - 1;
-
-    for (int x = 1; x <= height; x++)
+  int height = get_int("What's the height? ");
+  for (int z = 0; z < height; z++)
     {
-        spaces(times);
-        stair(x);
-        printf("\n");
-        times --;
-    }
-}
-
-void stair(int x)
-{
-    for (int y = 1; y <= x; y++)
+    for (int x = height - z; x > 0; x--)
     {
-        printf("#");
+        printf(" ");
     }
+    stair(z);
     printf("  ");
-    for (int y = 1; y <= x; y++)
-    {
-        printf("#");
+    stair(z);
+    printf("\n");
     }
 }
 
-void spaces(int t)
+void stair(int z)
 {
-    for (int z = t; z > 0; z--)
-        {
-            printf(" ");
-        }
+    for (int y = 0; y < z; y++)
+    {
+        printf("#");
+    }
 }

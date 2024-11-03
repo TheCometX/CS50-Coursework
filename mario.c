@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void spaces(int h);
 void stair(int x);
 
 int main(void)
@@ -10,10 +11,7 @@ int main(void)
 
     for (int x = 1; x <= height; x++)
     {
-        for (int z = num - 1; z > 0; z--)
-        {
-            printf(" ");
-        }
+        spaces(height);
         stair(x);
         printf("\n");
         num -= 1;
@@ -32,4 +30,14 @@ void stair(int x)
     {
         printf("#");
     }
+}
+
+void spaces(int h)
+{
+    int times = h - 1;
+    for (int z = times; z > 0; z--)
+        {
+            printf(" ");
+            times -= 1;
+        }
 }

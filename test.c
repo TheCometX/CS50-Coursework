@@ -10,7 +10,7 @@ int main(void)
     height = get_int("What's the height? ");
   }
   while (height < 0);
-  for (int z = 0; z < height; z++)
+  for (int z = 0; z <= height; z++)
     {
     for (int x = height - z; x > 0; x--)
     {

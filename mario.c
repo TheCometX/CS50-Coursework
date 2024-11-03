@@ -11,5 +11,5 @@ int main(void)
 
 int stair(height)
 {
-    
+    for (int  = 0; x <= )
 }

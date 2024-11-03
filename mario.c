@@ -3,8 +3,7 @@
 
 int main(void)
 {
-    int num = get_int("Height: \n");
-    for (int num; num > 0; num--)
+    for (int num = get_int("Height: \n"); num > 0; num--)
     {
         printf("%d", num);
     }

@@ -6,15 +6,17 @@ void stair(int x);
 int main(void)
 {
     int height = get_int("What's the height? ");
+    int num = height;
 
     for (int x = 1; x <= height; x++)
     {
-        for (int z = height - 1; z > 0; z--)
+        for (int z = num - 1; z > 0; z--)
         {
             printf(" ");
         }
         stair(x);
         printf("\n");
+        num -= 1;
     }
 
 }

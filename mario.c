@@ -6,7 +6,7 @@ void stair(int x);
 
 int main(void)
 {
-    int height = get_int("What's the height? ");
+    const int height = get_int("What's the height? ");
     int times = height - 1;
 
     for (int x = 1; x <= height; x++)
@@ -14,7 +14,7 @@ int main(void)
         spaces(times);
         stair(x);
         printf("\n");
-        times -= 1;
+        times --;
     }
 }
 

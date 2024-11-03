@@ -9,9 +9,9 @@ int main(void)
   {
     printf(" ");
   }
-  for
+  for (int y = 0; y < he)
   {
-    
+
   }
   for
   {

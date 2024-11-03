@@ -38,6 +38,6 @@ void spaces(int h)
     for (int z = times; z > 0; z--)
         {
             printf(" ");
-            times -= 1;
         }
+    times -= 1;
 }

@@ -25,7 +25,7 @@ void stair(int x)
     {
         printf("#");
     }
-    printf(" ");
+    printf("  ");
     for (int y = 1; y <= x; y++)
     {
         printf("#");

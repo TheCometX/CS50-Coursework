@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-void stair(z);
+void stair(int z);
 int main(void)
 {
   int height = get_int("What's the height? ");
@@ -12,13 +12,13 @@ int main(void)
         printf(" ");
     }
     stair(z);
-    printf(" ");
+    printf("  ");
     stair(z);
     printf("\n");
     }
 }
 
-void stair(z)
+void stair(int z)
 {
     for (int y = 0; y < z; y++)
     {

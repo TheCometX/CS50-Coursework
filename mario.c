@@ -1,15 +1,23 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int stair;
+
 int main(void)
 {
     int height = get_int("What's the height? ");
-    int times = 0;
 
+    for (int x = 1; x <= height; x++)
+    {
+        stair
+    }
 
 }
 
-int stair(height)
+int stair(height, x)
 {
-    for (int  = 0; x <= )
+    for (int y = 1; y <= x; y++)
+    {
+        printf("#");
+    }
 }

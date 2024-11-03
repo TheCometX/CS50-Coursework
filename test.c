@@ -4,9 +4,8 @@
 int main(void)
 {
   int height = get_int("What's the height? ");
-  while 
 
-
+  while (int z = )
     for (int x = height - 1; x > 0; x--)
     {
         printf(" ");

@@ -5,5 +5,5 @@ int main(void)
 {
     int height = get_int("What's the height");
 
-    whil
+    for
 }

@@ -6,6 +6,7 @@ int main(void)
   int height = get_int("What's the height? ");
 
   for (int z = 0; z < height; z++)
+    {
     for (int x = height - 1; x > 0; x--)
     {
         printf(" ");
@@ -22,4 +23,5 @@ int main(void)
         printf("#");
     }
     printf("\n");
+    }
 }

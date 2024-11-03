@@ -3,5 +3,18 @@
 
 int main(void)
 {
-  
+  int height = get_int("What's the height? ");
+
+  form
+  {
+
+  }
+  for
+  {
+
+  }
+  for
+  {
+
+  }
 }

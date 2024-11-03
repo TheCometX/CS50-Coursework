@@ -4,5 +4,8 @@
 int main(void)
 {
     int num = get_int("Height: \n");
-    for (num; num > 0; )
+    for (num; num > 0; num--)
+    {
+        
+    }
 }

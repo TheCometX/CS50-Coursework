@@ -5,17 +5,21 @@ int main(void)
 {
   int height = get_int("What's the height? ");
 
-  while (int z = )
+  for (int z = 0; z < height; z++)
     for (int x = height - 1; x > 0; x--)
     {
         printf(" ");
     }
-    for (int y = 0; y < he)
+    for (int y = 0; y < z; y++)
     {
-
+        printf("#");
     }
-    for
+
+    printf(" ");
+
+    for (int y = 0; y < z; y++)
     {
-
+        printf("#");
     }
+    printf("\n");
 }

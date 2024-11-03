@@ -5,13 +5,13 @@ int main(void)
 {
   int height = get_int("What's the height? ");
 
-  for (int x = height - 1; x < )
+  for (int x = height - 1; x > 0; x--)
   {
-
+    printf(" ");
   }
   for
   {
-
+    
   }
   for
   {

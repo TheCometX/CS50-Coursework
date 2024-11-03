@@ -7,7 +7,7 @@ int main(void)
 
   for (int z = 0; z < height; z++)
     {
-    for (int x = height - 1; x > 0; x--)
+    for (int x = z; x > 0; x--)
     {
         printf(" ");
     }

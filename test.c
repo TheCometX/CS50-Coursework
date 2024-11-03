@@ -5,7 +5,7 @@ int main(void)
 {
   int height = get_int("What's the height? ");
 
-  for (int x = height; )
+  for (int x = height - 1; x < )
   {
 
   }

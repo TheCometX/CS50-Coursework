@@ -6,10 +6,10 @@ int main(void)
     int num = get_int("Height: ");
     for (int x = num; x > 0; x--)
     {
-        for (int y = num; y > 0; y--)
+        for (int y = x; y > 0; y--)
         {
             printf(" ");
         }
-        printf("# #\n");
+        for (int z = x; z > 0; z++)
     }
 }

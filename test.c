@@ -4,9 +4,10 @@
 void stair(int z);
 int main(void)
 {
+  int height;
   do
   {
-    int height = get_int("What's the height? ");
+    height = get_int("What's the height? ");
   }
   while (height < 0);
   for (int z = 0; z < height; z++)

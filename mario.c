@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int stair;
+void stair(x);
 
 int main(void)
 {
@@ -9,13 +9,23 @@ int main(void)
 
     for (int x = 1; x <= height; x++)
     {
-        stair
+        for (int z = height - 1; z > 0; z--)
+        {
+            printf(" ")
+        }
+        stair(x);
+        printf("\n");
     }
 
 }
 
-int stair(height, x)
+void stair(x)
 {
+    for (int y = 1; y <= x; y++)
+    {
+        printf("#");
+    }
+    printf(" ");
     for (int y = 1; y <= x; y++)
     {
         printf("#");

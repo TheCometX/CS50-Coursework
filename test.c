@@ -5,5 +5,5 @@ int main(void)
 {
   long cardNum = get_long("Number? \n");
 
-  while 
+  for (int x = 10)
 }

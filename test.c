@@ -10,7 +10,7 @@ int main(void)
     times += 1;
     if (carNum % 2 == 0)
     {
-      
+      if (timed)
     }
   }
 }

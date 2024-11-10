@@ -8,6 +8,9 @@ int main(void)
   for (int x = 10; x < cardNum; x * 10)
   {
     times += 1;
-    
+    if (carNum % 2 == 0)
+    {
+      
+    }
   }
 }

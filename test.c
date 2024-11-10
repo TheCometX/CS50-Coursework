@@ -4,13 +4,10 @@
 int main(void)
 {
   long cardNum = get_long("Number? \n");
-  int times = 0
+  int length = 0;
   for (int x = 10; x < cardNum; x * 10)
   {
-    times += 1;
-    if (carNum % 2 == 0)
-    {
-      if (timed)
-    }
+    length += 1;
+    printf("%i", length);
   }
 }

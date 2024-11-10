@@ -3,6 +3,7 @@
 
 int main(void)
 {
-  int cardNum = get_int("What's the card number? \n");
-  
+  int cardNum = get_int("Number? \n");
+
+  for (int x = )
 }

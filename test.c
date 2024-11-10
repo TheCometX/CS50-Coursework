@@ -3,7 +3,7 @@
 
 int main(void)
 {
-  int cardNum = get_int("Number? \n");
+  long cardNum = get_long("Number? \n");
 
-  for (int x = ) 
+  for (int x = )
 }

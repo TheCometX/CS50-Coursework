@@ -3,11 +3,12 @@
 
 int main(void)
 {
+  int length = 1;
   long cardNum = get_long("Number: ");
-  for (int x = 10, int length = 1; x < cardNum; )
+  for (int x = 10; x < cardNum; )
   {
     x *= 10;
     length += 1;
   }
-  printf("%i", length);
+  printf("%i\n", length);
 }

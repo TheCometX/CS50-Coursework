@@ -9,4 +9,5 @@ int main(void)
     x *= 10;
     length += 1;
   }
+  printf("%i", length);
 }

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
 
 int main(void)
 {
@@ -10,9 +11,11 @@ int main(void)
     x *= 10;
     length += 1;
   }
-  for (int m = 10 * length; y > 0;);
+  int total = 0;
+  for (int m = pow(10, length); m > 0; m /= 100)
   {
-    y = y * 10;
-    printf("%i\n", y);
+    int result = cardNum / m;
+    total += result;
   }
+  printf("%i", total);
 }

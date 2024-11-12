@@ -10,5 +10,8 @@ int main(void)
     x *= 10;
     length += 1;
   }
-  printf("%i\n", length);
+  for (int y = 10 * length; y > 0; y/10);
+  {
+    printf("%i\n", y);
+  }
 }

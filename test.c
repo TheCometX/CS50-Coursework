@@ -14,8 +14,8 @@ int main(void)
   int total = 0;
   for (int m = pow(10, length); m > 0; m /= 100)
   {
-    int result = cardNum / m;
+    int result = (cardNum / m) * 2;
     total += result;
   }
-  printf("%i", total);
+  printf("%i\n", total);
 }

@@ -16,6 +16,7 @@ int main(void)
   {
     int result = (cardNum / m) * 2;
     total += result;
+    printf("%i\n", total);
   }
-  printf("%i\n", total);
+
 }

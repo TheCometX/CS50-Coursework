@@ -22,6 +22,7 @@ int main() {
           if (times == 1) {
             total3 += digit;
         }
+        }
         int result = 0;
         if (times % 2 == 1) {
             result += digit * 2;

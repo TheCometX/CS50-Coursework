@@ -36,7 +36,7 @@ int main() {
         times += 1;
     }
     if (total % 10 == 0) {
-    printf("Valid\n");
+      printf("VALID\n");
     if (length == 15 && (total2 == 7 || total2 == 10)){
         printf("American Express\n");
     }

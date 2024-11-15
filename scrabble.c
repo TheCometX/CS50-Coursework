@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-
-int len(char word);
+#include <cs50.h>
 
 int main() {
-    char word1[] = "Vinicius";
-    char word2[] = "Felipe";
+    string word1 = "Vinicius";
+    string word2 = "Felipe";
     int x = 0;
     int len1 = strlen(word1);
     int len2 = strlen(word2);

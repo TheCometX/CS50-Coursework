@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <cs50.h>
 #include <math.h>
 
 int main() {
-    long int cardNum = 4003600000000014;
+    long int cardNum = get_long("Number: ");
     int length = 0;
     for (long int x = 1; x < cardNum; x *= 10) {
         length += 1;
@@ -50,5 +51,8 @@ int main() {
             }
             }
         }
+    }
+    else {
+      printf("INVALID\n");
     }
 }

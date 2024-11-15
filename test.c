@@ -10,12 +10,12 @@ int main() {
     int times = 1;
     int p = length - 1;
     int total = 0;
-
+    int total2 = 0;
     for (long int y = pow(10, p); y > 0; y /= 10){
         int digit = cardNum / y;
         cardNum -= digit * y;
         if (times <= 2) {
-          
+          total2 += digit;
         }
         int result = 0;
         if (times % 2 == 1) {

@@ -15,8 +15,13 @@ int main() {
     for (long int y = pow(10, p); y > 0; y /= 10){
         int digit = cardNum / y;
         cardNum -= digit * y;
-        if (times <= 2) {
+        if (times <= 2){
           total2 += digit;
+        }
+        else {
+          if (times == 1) {
+            total3 = digit;
+        }
         }
         int result = 0;
         if (times % 2 == 1) {

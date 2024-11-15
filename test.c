@@ -9,13 +9,13 @@ int main() {
     }
     int times = 1;
     int p = length - 1;
-    int total;
+    int total = 0;
 
     for (long int y = pow(10, p); y > 0; y /= 10){
         int digit = cardNum / y;
         cardNum -= digit * y;
         printf("%i\n", digit);
-        int result;
+        int result = 0;
         if (times % 2 == 1) {
             result += digit * 2;
             for (int z = 10; z > 0; z /= 10) {
@@ -29,5 +29,5 @@ int main() {
         }
         times += 1;
     }
-    printf("%i", total);
+    printf("%i\n", total);
 }

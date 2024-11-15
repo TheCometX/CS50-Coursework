@@ -54,35 +54,35 @@ int main() {
 
 int points(string word) {
     int total;
-    int 
-    while (y < len1) {
-        char digit = toupper(word1[y]);
+    int len = strlen(word);
+    while (y < len) {
+        char digit = toupper(word[y]);
         if (digit == 'A' || digit == 'E' || digit == 'I' || digit == 'L' || digit == 'N' || digit == 'O' || digit == 'R' || digit == 'S' || digit == 'T' || digit == 'U') {
-            total1 += 1;
+            total += 1;
         }
         else {
             if (digit == 'D' || digit == 'G') {
-                total1 += 2;
+                total += 2;
             }
             else {
                 if (digit == 'B' || digit == 'C' || digit == 'M' || digit == 'P') {
-                total1 += 3;
+                total += 3;
                 }
                 else {
                     if (digit == 'F' || digit == 'H' || digit == 'V' || digit == 'W' || digit == 'Y') {
-                    total1 += 4;
+                    total += 4;
                     }
                     else {
                         if (digit == 'K') {
-                        total1 += 5;
+                        total += 5;
                         }
                         else {
                             if (digit == 'J' || digit == 'X') {
-                            total1 += 8;
+                            total += 8;
                             }
                             else {
                                 if (digit == 'Q' || digit == 'Z') {
-                                total1 += 10;
+                                total += 10;
                                 }
                             }
                         }
@@ -92,4 +92,5 @@ int points(string word) {
         }
         y++;
     }
+    return total;
 }

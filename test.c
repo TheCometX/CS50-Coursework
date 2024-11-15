@@ -37,10 +37,10 @@ int main() {
     }
     if (total % 10 == 0) {
       printf("VALID\n");
-    if (length == 15 && (total2 == 7 || total2 == 10)){
+      if (length == 15 && (total2 == 7 || total2 == 10)){
         printf("American Express\n");
-    }
-    else {
+      }
+      else {
         if (length == 16 && (total2 == 6 || total2 == 7 || total2 == 8 || total2 == 9 || total2 == 10)) {
             printf("MasterCard\n");
         }

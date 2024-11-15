@@ -17,11 +17,8 @@ int main() {
         cardNum -= digit * y;
         if (times <= 2){
           total2 += digit;
-        }
-        else {
           if (times == 1) {
             total3 += digit;
-          }
         }
         int result = 0;
         if (times % 2 == 1) {

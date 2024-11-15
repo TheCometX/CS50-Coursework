@@ -1,17 +1,33 @@
 #include <stdio.h>
-#include <cs50.h>
-#include <string.h>
 #include <math.h>
 
-int len(string n);
+int main() {
+    long int cardNum = 4003600000000014;
+    int length = 0;
+    for (long int x = 1; x < cardNum; x *= 10) {
+        length += 1;
+    }
+    int times = 1;
+    int p = length - 1;
+    int total;
 
-int main(void)
-{
-  string name = "Vinicius";
-  printf("%i", len(name));
-}
-
-int len(string n) {
-  int x = strlen(n);
-  return x;
+    for (long int y = pow(10, p); y > 0; y /= 10){
+        int digit = cardNum / y;
+        cardNum -= digit * y;
+        printf("%i\n", digit);
+        int result;
+        if (times % 2 == 1) {
+            result += digit * 2;
+            for (int z = 10; z > 0; z /= 10) {
+                int digit2 = result / z;
+                result -= digit2 * z;
+                total += digit2;
+            }
+        }
+        else {
+            total += digit;
+        }
+        times += 1;
+    }
+    printf("%i", total);
 }

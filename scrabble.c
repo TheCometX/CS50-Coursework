@@ -6,10 +6,18 @@
 int points(string word);
 
 int main() {
-    string word1 = "Vinicius";
-    string word2 = "Felipe";
-    if (points(word1) > points(word2)) {
-        printf("Person 1)
+    string word1 = get_string("Player 1: ");
+    string word2 = get_string("Player 2: ");
+    if (points(word1) == points(word2)) {
+        printf("Tie!\n");
+    }
+    else {
+        if (points(word1) > points(word2)) {
+            printf("Player 1 wins!\n");
+        }
+        else {
+            printf("Player 2 wins!\n");
+        }
     }
 }
 

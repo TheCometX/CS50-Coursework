@@ -37,5 +37,20 @@ int main() {
         }
         times += 1;
     }
-    printf("%i\n", total);
+        if (total % 10 == 0) {
+        printf("Valid\n");
+        if (length == 15 && (total2 == 7 || total2 == 10)){
+            printf("American Express\n");
+        }
+        else {
+            if (length == 16 && (total2 == 6 || total2 == 7 || total2 == 8 || total2 == 9 || total2 == 10)) {
+                printf("MasterCard\n");
+            }
+            else {
+                if ((length == 13 || length == 16) && total3 == 4) {
+                    printf("Visa\n");
+                }
+            }
+        }
+    }
 }

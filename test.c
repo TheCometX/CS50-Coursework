@@ -14,7 +14,9 @@ int main() {
     for (long int y = pow(10, p); y > 0; y /= 10){
         int digit = cardNum / y;
         cardNum -= digit * y;
-        printf("%i\n", digit);
+        if (times <= 2) {
+          
+        }
         int result = 0;
         if (times % 2 == 1) {
             result += digit * 2;

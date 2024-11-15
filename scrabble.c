@@ -8,14 +8,15 @@ int points(string word);
 int main() {
     string word1 = "Vinicius";
     string word2 = "Felipe";
-    int x = 0;
-    printf("%i\n", points(word1));
+    if (points(word1) > points(word2)) {
+        printf("Person 1)
+    }
 }
 
 int points(string word) {
-    int total;
+    int total = 0;
     int len = strlen(word);
-
+    int y = 0;
     while (y < len) {
         char digit = toupper(word[y]);
         if (digit == 'A' || digit == 'E' || digit == 'I' || digit == 'L' || digit == 'N' || digit == 'O' || digit == 'R' || digit == 'S' || digit == 'T' || digit == 'U') {

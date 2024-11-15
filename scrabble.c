@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <cs50.h>
+#include <ctype.h>
 
 int main() {
     string word1 = "Vinicius";
@@ -8,8 +9,8 @@ int main() {
     int x = 0;
     int len1 = strlen(word1);
     int len2 = strlen(word2);
-    int total1;
-    int total2;
+    int total1 = 0;
+    int total2 = 0;
     int y = 0;
     while (y < len1) {
         char digit = toupper(word1[y]);

@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <string.h>
 #include <math.h>
+
+int len(string n);
 
 int main(void)
 {
-  int length = 1;
-  long cardNum = get_long("Number: ");
-  for (int x = 10; x < cardNum; )
-  {
-    x *= 10;
-    length += 1;
-  }
+  string name = "Vinicius";
+  printf("%i", len(name));
+}
+
+int len(string n) {
+  int x = strlen(n);
+  return x;
 }

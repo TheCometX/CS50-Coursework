@@ -11,6 +11,7 @@ int main() {
     int p = length - 1;
     int total = 0;
     int total2 = 0;
+    int total3 = 0;
     for (long int y = pow(10, p); y > 0; y /= 10){
         int digit = cardNum / y;
         cardNum -= digit * y;

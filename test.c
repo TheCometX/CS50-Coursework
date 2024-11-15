@@ -46,7 +46,7 @@ int main() {
         }
         else {
             if ((length == 13 || length == 16) && total3 == 4) {
-                printf("Visa\n");
+                printf("VISA\n");
             }
             }
         }

@@ -20,7 +20,7 @@ int main() {
         }
         else {
           if (times == 1) {
-            total3 = digit;
+            total3 += digit;
         }
         }
         int result = 0;

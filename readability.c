@@ -10,11 +10,11 @@ int main() {
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
-        if (letter != '.' || letter != '?' || letter != '!' || letter != '"' || letter != ',' || letter != '(' || letter != ')' || letter != '[' || letter != '/' || letter != '*' || letter != ':' || letter != '-' || letter != ' ') {
+        if ((letter != '. ') && (letter != '?') && (letter != '!') && (letter != '"') && (letter != ', ') && (letter != '(') && (letter != ')') && (letter != '[') && (letter != '/') && (letter != '*') && (letter != ':') && (letter != '-') && (letter != ' ')) {
             letters += 1;
         }
         else {
-            if (letter == '.') {
+            if (letter == '. ') {
                 sentences += 1;
             }
         }

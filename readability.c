@@ -33,7 +33,12 @@ int main() {
         printf("Before Grade 1\n");
     }
     else {
-        printf("Grade %.0f\n", result);
+        if (result > 16) {
+            printf("Grade 16+\n");
+        }
+        else {
+            printf("Grade %.0f\n", result);
+        }
     }
 }
 

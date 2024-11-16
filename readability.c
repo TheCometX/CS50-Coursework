@@ -28,10 +28,12 @@ int main() {
             }
         }
     }
-    int result = 0.0588 * ((letters / words) * 100) - 0.296 * ((sentences / words) * 100) - 15.8;
-    printf("%.0f\n", letters);
-    printf("%.0f\n", sentences);
-    printf("%.0f\n", words);
-    printf("%i\n", result);
+    float result = 0.0588 * ((letters / words) * 100) - 0.296 * ((sentences / words) * 100) - 15.8;
+    if (result < 0) {
+        printf("Before Grade 1\n");
+    }
+    else {
+        printf("Grade %.0f\n", result);
+    }
 }
 

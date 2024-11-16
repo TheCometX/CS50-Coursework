@@ -9,7 +9,7 @@ int main() {
     int words = 0;
     int letters = 0;
     for (int y = 0; y < len; y++) {
-        string letter = text[y];
+        char letter = text[y];
         if (strcmp(letter, " ")) {
 
         }

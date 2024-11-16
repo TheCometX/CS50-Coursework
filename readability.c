@@ -8,6 +8,7 @@ int main() {
     int len = strlen(text);
     int sentences = 0;
     int letters = 0;
+    int words = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
         if (isalpha(letter) != 0) {

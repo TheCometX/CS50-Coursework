@@ -17,6 +17,7 @@ int main() {
             words += 1;
         }
     }
+    int grade = 
     printf("%i\n", letters);
     printf("%i\n", words);
 }

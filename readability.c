@@ -5,11 +5,10 @@
 
 int main() {
     string text = get_string("Text: ");
-    int len = strlen(text);
     float sentences = 0;
     float letters = 0;
     float words = 1;
-    for (int y = 0; y < len; y++) {
+    for (int y = 0; y < strlen(text); y++) {
         if (words == 100) {
             break;
         }

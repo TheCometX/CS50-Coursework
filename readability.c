@@ -6,9 +6,9 @@
 int main() {
     string text = get_string("Text: ");
     int len = strlen(text);
-    int sentences = 0;
-    int letters = 0;
-    int words = 1;
+    float sentences = 0;
+    float letters = 0;
+    float words = 1;
     for (int y = 0; y < len; y++) {
         if (words == 100) {
             break;
@@ -28,8 +28,10 @@ int main() {
             }
         }
     }
-    printf("%i\n", letters);
-    printf("%i\n", sentences);
-    printf("%i\n", words);
+    int result = 0.0588 * ((letters / words) * 100) - 0.296 * ((sentences / words) * 100) - 15.8;
+    printf("%.0f\n", letters);
+    printf("%.0f\n", sentences);
+    printf("%.0f\n", words);
+    printf("%i\n", result);
 }
 

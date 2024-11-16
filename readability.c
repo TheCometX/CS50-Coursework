@@ -11,7 +11,12 @@ int main() {
     for (int y = 0; y < len; y++) {
         char letter = text[y];
         if (letter != ' ') {
-
+            letters += 1;
+        }
+        else {
+            words += 1;
         }
     }
+    printf("%i\n", letters);
+    printf("%i\n", words);
 }

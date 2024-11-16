@@ -10,6 +10,9 @@ int main() {
     int letters = 0;
     int words = 0;
     for (int y = 0; y < len; y++) {
+        if (words == 100) {
+            break;
+        }
         char letter = text[y];
         if (isalpha(letter) != 0) {
             letters += 1;
@@ -24,9 +27,6 @@ int main() {
                     }
                 }
             }
-        }
-        if (words == 100) {
-            break
         }
     }
     printf("%i\n", letters);

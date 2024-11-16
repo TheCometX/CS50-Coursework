@@ -14,9 +14,18 @@ int main() {
             letters += 1;
         }
         else {
-            if (letter == '.' || letter == '?' || letter == '!') {
-                sentences += 1;
+            if (letter == ' '){
+                words += 1;
+                }
+                else {
+                    if (letter == '.' || letter == '?' || letter == '!') {
+                        sentences += 1;
+                    }
+                }
             }
+        }
+        if (words == 100) {
+            break
         }
     }
     printf("%i\n", letters);

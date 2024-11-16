@@ -10,7 +10,7 @@ int main() {
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
-        if (letter != '.') {
+        if (letter != '.' || letter != '?' || letter != '!') {
             letters += 1;
         }
         else {

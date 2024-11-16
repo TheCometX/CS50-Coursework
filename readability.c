@@ -6,11 +6,11 @@
 int main() {
     string text = get_string("Text: ");
     int len = strlen(text);
-    int words = 1;
+    int sentences = 1;
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
-        if (letter != '.' || letter != '?' || letter != '!' || letter != ''' || letter != '"' || letter != ',' || letter != '(' || letter != ')' || letter != '[' || letter != '/' || letter != '*' || letter != ':' || letter != '-') {
+        if (letter != '.' || letter != '?' || letter != '!' || letter != '"' || letter != ',' || letter != '(' || letter != ')' || letter != '[' || letter != '/' || letter != '*' || letter != ':' || letter != '-') {
             letters += 1;
         }
         else {
@@ -21,5 +21,5 @@ int main() {
     }
     int grade = 0.0588 * L - 0.296 * S - 15.8
     printf("%i\n", letters);
-    printf("%i\n", words);
+    printf("%i\n", setences);
 }

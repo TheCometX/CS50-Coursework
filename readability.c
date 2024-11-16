@@ -6,7 +6,7 @@
 int main() {
     string text = get_string("Text: ");
     int len = strlen(text);
-    int sentences = 1;
+    int sentences = 0;
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];

@@ -10,11 +10,13 @@ int main() {
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
-        if (letter != '.' || letter != '?' || letter != '!' || letter != ''' || letter != '"' || letter != ',' || letter != '(' || letter != ')' || letter != '[' || letter != '{' || letter != '}' || letter != ':' || letter != '-' || letter != '_' || letter != ';') {
+        if (letter != '.' || letter != '?' || letter != '!' || letter != ''' || letter != '"' || letter != ',' || letter != '(' || letter != ')' || letter != '[' || letter != '/' || letter != '*' || letter != ':' || letter != '-' || letter != '_' || letter != ';') {
             letters += 1;
         }
         else {
-            sentences += 1;
+            if (letter == '.') {
+                sentences += 1;
+            }
         }
     }
     int grade = 0.0588 * L - 0.296 * S - 15.8

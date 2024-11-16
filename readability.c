@@ -29,6 +29,4 @@ int main() {
             }
         }
     }
-    printf("%i\n", letters);
-    printf("%i\n", sentences);
 }

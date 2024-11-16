@@ -10,11 +10,11 @@ int main() {
     int letters = 0;
     for (int y = 0; y < len; y++) {
         char letter = text[y];
-        if (letter != ' ') {
+        if (letter != '.') {
             letters += 1;
         }
         else {
-            words += 1;
+            sentences += 1;
         }
     }
     int grade = 0.0588 * L - 0.296 * S - 15.8

@@ -14,7 +14,7 @@ int main() {
             letters += 1;
         }
         else {
-            if (letter == '.') {
+            if (letter == '.' || letter == '?' || letter == '!') {
                 sentences += 1;
             }
         }

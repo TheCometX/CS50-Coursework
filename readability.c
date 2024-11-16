@@ -8,7 +8,7 @@ int main() {
     int len = strlen(text);
     int sentences = 0;
     int letters = 0;
-    int words = 0;
+    int words = 1;
     for (int y = 0; y < len; y++) {
         if (words == 100) {
             break;
@@ -20,13 +20,16 @@ int main() {
         else {
             if (letter == ' '){
                 words += 1;
-                }
-                else {
-                    if (letter == '.' || letter == '?' || letter == '!') {
-                        sentences += 1;
-                    }
+            }
+            else {
+                if (letter == '.' || letter == '?' || letter == '!') {
+                    sentences += 1;
                 }
             }
         }
     }
+    printf("%i\n", letters);
+    printf("%i\n", sentences);
+    printf("%i\n", words);
 }
+

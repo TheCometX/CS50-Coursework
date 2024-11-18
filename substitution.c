@@ -14,5 +14,10 @@ int main(int argc, string argv[]) {
         }
     }
     string text = get_string("plaintext: ");
-
+    for (int y = 0; y < len; y++) {
+        char letter = argv[y];
+        if (isalpha(letter) && isdigit(letter) != false) {
+            
+        }
+    }
 }

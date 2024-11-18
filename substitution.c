@@ -12,5 +12,5 @@ int main(int argc, string argv[]) {
         }
     }
     string text = get_string("plaintext: ");
-    
+
 }

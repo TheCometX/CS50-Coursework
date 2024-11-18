@@ -14,15 +14,16 @@ int main(int argc, string argv[]) {
         else {
             char letters[26]= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
             string text = get_string("plaintext: ");
+            for (int z = 0; z < strlen(text); z++) {
+                islower(text[z]);
+            }
             for (int x = 0; x < strlen(text); x++) {
                 char letter = text[x];
-                int times = 0;
                 if (isalpha(letter)) {
                     for (int y = 0; y < 26; y++) {
                         if (letter == letters[y]) {
                             char letter2 = argv[1][y];
-                            times += 1;
-                            if (times == 1) {
+                            if (x == 0) {
                                 printf("%c", toupper(letter2));
                             }
                             else {

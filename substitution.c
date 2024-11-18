@@ -8,24 +8,31 @@ int main(int argc, string argv[]) {
         printf("Usage: ./substitution key\n");
     }
     else {
-        if (len != 26) {
+        if (strlen(argv[2]) != 26) {
             printf("Key must contain 26 characters.\n");
         }
     }
-    char letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    char letters[26]= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     string text = get_string("plaintext: ");
     for (int x = 0; x < strlen(text); x++) {
         char letter = text[x];
-        for (int y = 0; y < 26; y++) {
-            if (letter == letters[y]) {
-                char letter2 = argv[y];
-                if (times == 1) {
-                    printf("%c", toupper(letter2));
+        int times = 1;
+        if (isalpha(letter)) {
+            for (int y = 0; y < 26; y++) {
+                if (letter == letters[y]) {
+                    char letter2 = argv[2][y];
+                    if (times == 1) {
+                      printf("%c", toupper(letter2));
+                    }
+                    else {
+                        printf("%c", letter2);
+                    }
                 }
-                else {
-                    printf("%c", letter2);
-                }
+            times += 1;
             }
+        }
+        else {
+            printf("%c", letter);
         }
     }
 }

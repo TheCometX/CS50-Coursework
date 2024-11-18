@@ -27,7 +27,7 @@ int main(int argc, string argv[]) {
                                 printf("%c", toupper(letter2));
                             }
                             else {
-                                printf("%c", letter2);
+                                printf("%c", tolower(letter2));
                             }
                         }
                     }

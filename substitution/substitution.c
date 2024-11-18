@@ -27,8 +27,8 @@ int main(int argc, string argv[]) {
                             else {
                                 printf("%c", letter2);
                             }
-                        }
                         times += 1;
+                        }
                     }
                 }
                 else {

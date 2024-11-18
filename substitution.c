@@ -18,7 +18,16 @@ int main(int argc, string argv[]) {
         char letter = argv[y];
         if (isalpha(letter) && isdigit(letter) != false) {
             for (int x = 0; x < 25; x++) {
-                
+                char letter2 = letters[x];
+                int times = 1;
+                if (letter == letter2) {
+                    if (times == 1) {
+                        printf("%c", toupper(letter))
+                    }
+                    else {
+                        printf("%c", letter)
+                    }
+                }
             }
         }
     }

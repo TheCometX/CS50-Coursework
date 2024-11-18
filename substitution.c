@@ -13,5 +13,19 @@ int main(int argc, string argv[]) {
         }
     }
     char letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    
+    string text = get_string("plaintext: ");
+    for (int x = 0; x < strlen(text); x++) {
+        char letter = text[x];
+        for (int y = 0; y < 26; y++) {
+            if (letter == letters[y]) {
+                char letter2 = argv[y];
+                if (times == 1) {
+                    printf("%c", toupper(letter2));
+                }
+                else {
+                    printf("%c", letter2);
+                }
+            }
+        }
+    }
 }

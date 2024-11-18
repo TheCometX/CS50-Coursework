@@ -11,28 +11,31 @@ int main(int argc, string argv[]) {
         if (strlen(argv[2]) != 26) {
             printf("Key must contain 26 characters.\n");
         }
-    }
-    char letters[26]= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-    string text = get_string("plaintext: ");
-    for (int x = 0; x < strlen(text); x++) {
-        char letter = text[x];
-        int times = 1;
-        if (isalpha(letter)) {
-            for (int y = 0; y < 26; y++) {
-                if (letter == letters[y]) {
-                    char letter2 = argv[2][y];
-                    if (times == 1) {
-                      printf("%c", toupper(letter2));
-                    }
-                    else {
-                        printf("%c", letter2);
+        else {
+            char letters[26]= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+            string text = get_string("plaintext: ");
+            for (int x = 0; x < strlen(text); x++) {
+                char letter = text[x];
+                int times = 1;
+                if (isalpha(letter)) {
+                    for (int y = 0; y < 26; y++) {
+                        if (letter == letters[y]) {
+                            char letter2 = argv[2][y];
+                            if (times == 1) {
+                                printf("%c", toupper(letter2));
+                            }
+                            else {
+                                printf("%c", letter2);
+                            }
+                        }
+                    times += 1;
                     }
                 }
-            times += 1;
+                else {
+                    printf("%c", letter);
+                }
             }
-        }
-        else {
-            printf("%c", letter);
+            printf("\n");
         }
     }
 }

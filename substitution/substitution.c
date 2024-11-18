@@ -8,7 +8,7 @@ int main(int argc, string argv[]) {
         printf("Usage: ./substitution key\n");
     }
     else {
-        if (strlen(argv[2]) != 26) {
+        if (strlen(argv[1]) != 26) {
             printf("Key must contain 26 characters.\n");
         }
         else {
@@ -20,7 +20,7 @@ int main(int argc, string argv[]) {
                 if (isalpha(letter)) {
                     for (int y = 0; y < 26; y++) {
                         if (letter == letters[y]) {
-                            char letter2 = argv[2][y];
+                            char letter2 = argv[1][y];
                             if (times == 1) {
                                 printf("%c", toupper(letter2));
                             }

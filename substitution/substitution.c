@@ -23,7 +23,6 @@ int main(int argc, string argv[]) {
                             char letter2 = argv[1][y];
                             if (times == 1) {
                                 printf("%c", toupper(letter2));
-                                times += 1;
                             }
                             else {
                                 printf("%c", letter2);

@@ -22,12 +22,12 @@ int main(int argc, string argv[]) {
                         if (letter == letters[y]) {
                             char letter2 = argv[1][y];
                             if (times == 1) {
-                                printf("%c", letter2);
+                                printf("%c", toupper(letter2));
+                                times += 1;
                             }
                             else {
                                 printf("%c", letter2);
                             }
-                        times += 1;
                         }
                     }
                 }

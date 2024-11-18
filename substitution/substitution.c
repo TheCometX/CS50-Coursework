@@ -16,16 +16,17 @@ int main(int argc, string argv[]) {
             string text = get_string("plaintext: ");
             for (int x = 0; x < strlen(text); x++) {
                 char letter = text[x];
-                int times = 1;
+                int times = 0;
                 if (isalpha(letter)) {
                     for (int y = 0; y < 26; y++) {
                         if (letter == letters[y]) {
                             char letter2 = argv[1][y];
+                            times += 1;
                             if (times == 1) {
                                 printf("%c", toupper(letter2));
                             }
                             else {
-                                printf("%c", letter2);
+                                printf("%c", tolower(letter2));
                             }
                         }
                     }

@@ -5,7 +5,7 @@
 int main(int argc, string argv[]) {
     int len = strlen(argv[2]);
     for (int y = 0; y < len; y++) {
-        
+        char letter = 
     }
 
     if (argc != 2) {

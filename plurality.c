@@ -11,7 +11,7 @@ candidate;
 int main(int argc, string argv[])
 {
     candidate person[argc];
-    for (int y = 0; y < argc; y++)
+    for (int y = 0; y < argc - 1; y++)
     {
         person[y].name = argv[y+1];
     }

@@ -11,10 +11,9 @@ candidate;
 int main(int argc, string argv[])
 {
     candidate person[argc];
-    for (int y = 1; y < argc; y++)
+    for (int y = 0; y < argc; y++)
     {
-        person[y].name = argv[y];
+        person[y].name = argv[y+1];
     }
-    int number = get_int("Number of voters: ");
-    for (int x = 0; x < number; )
+    
 }

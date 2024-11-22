@@ -1,11 +1,12 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: have a big difference between best and worst scenario, in worst scenario was the slowest
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: its times don't have a big difference between times, in worst case it was the fastest even that in first was the slowest
 
-sort3 uses: TODO
 
-How do you know?: TODO
+sort3 uses: Selection sort
+
+How do you know?: Have a big difference between times, but the difference was lower than the first script

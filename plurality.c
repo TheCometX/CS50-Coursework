@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <ctype.h>
 
 typedef struct
 {
@@ -19,9 +20,9 @@ int main(int argc, string argv[])
     for (int x = 0; x < number; x++)
     {
         string vote = get_string("Vote: ");
-        for (int z = 0, z < argc - 1; z++)
+        for (int z = 0; z < argc - 1; z++)
         {
-            if (strcmp(candidate[z].name, vote) == 0)
+            if (strcmp(candidate[z].name, vote) == 0))
             {
                 candidate[z].votes += 1;
             }

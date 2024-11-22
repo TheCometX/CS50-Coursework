@@ -22,7 +22,7 @@ int main(int argc, string argv[])
         string vote = get_string("Vote: ");
         for (int z = 0; z < argc - 1; z++)
         {
-            printf("%s", person[z].name);
+            printf("%s\n", person[z].name);
             if (strcmp(person[z].name, vote) == 0)
             {
                 person[z].votes += 1;

@@ -19,9 +19,12 @@ int main(int argc, string argv[])
     for (int x = 0; x < number; x++)
     {
         string vote = get_string("Vote: ");
-        for (int z = 0, z < argc; z++)
+        for (int z = 0, z < argc - 1; z++)
         {
-            
+            if (strcmp(candidate[z].name, vote) == 0)
+            {
+                candidate[z].votes += 1;
+            }
         }
     }
 }

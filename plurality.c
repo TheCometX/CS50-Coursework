@@ -15,6 +15,7 @@ int main(int argc, string argv[])
     for (int y = 0; y < argc - 1; y++)
     {
         person[y].name = argv[y+1];
+        person[y].votes = 0;
     }
     int number = get_int("Number of voters: ");
     for (int x = 0; x < number; x++)
@@ -22,12 +23,10 @@ int main(int argc, string argv[])
         string vote = get_string("Vote: ");
         for (int z = 0; z < argc - 1; z++)
         {
-            printf("%s\n", person[z].name);
             if (strcmp(person[z].name, vote) == 0)
             {
                 person[z].votes += 1;
             }
         }
     }
-    printf("%i\n", person[0].votes);
 }

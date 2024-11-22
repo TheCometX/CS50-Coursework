@@ -22,7 +22,8 @@ int main(int argc, string argv[])
         string vote = get_string("Vote: ");
         for (int z = 0; z < argc - 1; z++)
         {
-            if (strcmp(candidate[z].name, vote) == 0)
+            string name = candidate[z].name
+            if (strcmp(name, vote) == 0)
             {
                 candidate[z].votes += 1;
             }

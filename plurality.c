@@ -29,5 +29,5 @@ int main(int argc, string argv[])
             }
         }
     }
-    printf("%i\n", person[0].name);
+    printf("%s\n", person[0].name);
 }

@@ -19,6 +19,6 @@ int main(int argc, string argv[])
     for (int x = 0; x < number; x++)
     {
         string vote = get_string("Vote: ");
-        for (int z)
+        for (int z = 0, z < argc;)
     }
 }

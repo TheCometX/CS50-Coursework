@@ -15,5 +15,5 @@ int main(int argc, string argv[])
         person[y].name = argv[y];
     }
     int number = get_int("Number of voters: ");
-    for (int x = 0; )
+    for (int x = 0; x < number; )
 }

@@ -23,11 +23,11 @@ int main(int argc, string argv[])
         for (int z = 0; z < argc - 1; z++)
         {
             printf("%s\n", person[z].name);
-            if (strcmp(person[z].name, vote))
+            if (strcmp(person[z].name, vote) == 0)
             {
                 person[z].votes += 1;
             }
         }
     }
-    printf("%s\n", person[0].name);
+    printf("%i\n", person[0].votes);
 }

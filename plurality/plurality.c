@@ -87,7 +87,10 @@ void print_winner(void)
             candidates[y].votes = candidates[y + 1].votes;
             candidates[y + 1].votes = change;
         }
-        for (int z = )
+        for (int z = 0; z < candidate_count; z++)
+        {
+            printf("%s", candidates[z].name);
+        }
     }
     for (int x = 0; x < candidate_count; x++)
     {

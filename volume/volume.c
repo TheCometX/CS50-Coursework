@@ -32,14 +32,7 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
-    if (factor == 2.0)
-    {
-        int16_t transf;
-    }
-    else
-    {
-        uint8_t transf;
-    }
+    int16_t transf;
 
     while (fread(&transf, sizeof(transf), 1, input) != 0)
     {

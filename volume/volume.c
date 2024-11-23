@@ -32,12 +32,20 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
-
-    while (fread(&b, sizeof(b), 1, src) !=0)
+    if (factor == 2.0)
     {
-        fwrite(&b, sizeof(b), 1, dst);
+        int16_t transf;
     }
-    
+    else
+    {
+        uint8_t transf;
+    }
+
+    while (fread(&transf, sizeof(transf), 1, input) != 0)
+    {
+        fwrite(&transf, sizeof(transf), 1, output);
+    }
+
     // Close files
     fclose(input);
     fclose(output);

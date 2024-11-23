@@ -67,7 +67,7 @@ bool vote(string name)
 {
     for (int y = 0; y < candidate_count; y++)
     {
-        if (strcmp(candidates[y].name, name) == 0)
+        if (strcmp(candidates[y].name, name) == 0)         //compare the name with all candidates
         {
             candidates[y].votes += 1;
             return true;
@@ -79,14 +79,15 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    for (int y = 0; y < candidate_count; y++)
+    for (int y = 0; y < candidate_count; y++)                  //bubble sort
     {
         while (candidates[y].votes < candidates[y + 1].votes)
         {
-            int change = candidates[y].votes;
+            int change = candidates[y].votes;                 //variable used to change place of values
             candidates[y].votes = candidates[y + 1].votes;
             candidates[y + 1].votes = change;
         }
     }
+    
     return ;
 }

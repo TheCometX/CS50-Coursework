@@ -88,6 +88,9 @@ void print_winner(void)
             candidates[y + 1].votes = change;
         }
     }
-    
+    for (int x = candidate_count -1 ; x >= 0; x--)
+    {
+        
+    }
     return ;
 }

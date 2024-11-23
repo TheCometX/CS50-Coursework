@@ -10,6 +10,11 @@ int main(int argc, char *argv[])
  FILE *input = fopen(argv[1], "r");
  if (input == NULL)
  {
-    printf(")
+    printf("Could not open file.\n");
+ }
+ FILE *output = fopen(argv[2], "w");
+ if (output == NULL)
+ {
+    printf("Could not open file.\n");
  }
 }

@@ -81,7 +81,7 @@ void print_winner(void)
 {
     for (int y = 0; y < candidate_count; y++)                  //bubble sort
     {
-        while (candidates[y].votes > candidates[y + 1].votes && y < candidate_count)
+        while (candidates[y].votes > candidates[y + 1].votes && y < candidate_count - 1)
         {
             int change = candidates[y].votes;                 //variable used to change place of values
             candidates[y].votes = candidates[y + 1].votes;

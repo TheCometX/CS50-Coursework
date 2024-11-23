@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
+    int16_t transf;
+
     if (factor == 2.0)
     {
         int16_t transf;

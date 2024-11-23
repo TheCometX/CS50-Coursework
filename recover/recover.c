@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
 int main(int argc, char *argv[])
 {
  if (argc != 4)
@@ -17,5 +19,5 @@ int main(int argc, char *argv[])
  {
     printf("Could not open file.\n");
  }
- 
+
 }

@@ -63,7 +63,7 @@ int main(int argc, string argv[])
 }
 
 // Update vote totals given a new vote
-bool vote(string name, int argc)
+bool vote(string name)
 {
     for (int y = 0; y < argc - 1; y++)
     {

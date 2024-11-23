@@ -84,7 +84,7 @@ void print_winner(void)
         while (candidates[y].votes < candidates[y + 1].votes)
         {
             int change = candidates[y].votes;
-            candidates[y].votes = candidates[y + 1];
+            candidates[y].votes = candidates[y + 1].votes;
             candidates[y + 1].votes = change;
         }
     }

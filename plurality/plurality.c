@@ -86,6 +86,11 @@ void print_winner(void)
         {
             more_votes = candidate[x].votes;
         }
+        if (x == candidate_count - 1)
+        {
+            printf("%i", more_votes);
+            return 0
+        }
     }
-    return;
+    return 1;
 }

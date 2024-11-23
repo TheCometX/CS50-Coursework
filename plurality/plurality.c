@@ -88,9 +88,12 @@ void print_winner(void)
             candidates[y + 1].votes = change;
         }
     }
-    for (int x = candidate_count -1 ; x >= 0; x--)
+    for (int x = 0; x < candidate_count; x++)
     {
-        
+        if (candidates[x].votes == candidates[candidate_count - 1].votes)
+        {
+            printf("%s", candidates[x].name);
+        }
     }
-    return ;
+    return;
 }

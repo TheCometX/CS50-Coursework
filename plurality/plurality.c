@@ -79,25 +79,6 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    for (int y = 0; y < candidate_count; y++)                  //bubble sort
-    {
-        while (candidates[y].votes > candidates[y + 1].votes && y < candidate_count - 1)
-        {
-            int change = candidates[y].votes;                 //variable used to change place of values
-            candidates[y].votes = candidates[y + 1].votes;
-            candidates[y + 1].votes = change;
-        }
-        for (int z = 0; z < candidate_count; z++)
-        {
-            printf("%s\n", candidates[z].name);
-        }
-    }
-    for (int x = 0; x < candidate_count; x++)
-    {
-        if (candidates[x].votes == candidates[candidate_count - 1].votes)
-        {
-            printf("%s\n", candidates[x].name);
-        }
-    }
+    
     return;
 }

@@ -89,7 +89,7 @@ void print_winner(void)
         }
         for (int z = 0; z < candidate_count; z++)
         {
-            printf("%s", candidates[z].name);
+            printf("%s\n", candidates[z].name);
         }
     }
     for (int x = 0; x < candidate_count; x++)

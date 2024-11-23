@@ -67,7 +67,7 @@ bool vote(string name)
 {
     for (int y = 0; y < argc - 1; y++)
     {
-        
+        if (strcmp())
     }
     return false;
 }

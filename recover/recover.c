@@ -7,4 +7,9 @@ int main(int argc, char *argv[])
  {
     printf("Usage: ./volume input.wav output.wav factor\n");
  }
+ FILE *input = fopen(argv[1], "r");
+ if (input == NULL)
+ {
+    printf(")
+ }
 }

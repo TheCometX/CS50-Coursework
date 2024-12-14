@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include <cs50.h>
-
+#include <stdio.h>
 void stair(int z);
 int main(void)
 {

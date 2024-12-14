@@ -23,9 +23,9 @@ int main(int argc, string argv[]) {
         for (int y = 0; y < 26; y++)
         {
             char alpha = letters[y];
-            if (strcmp(letter, alpha) == 0)
+            if (letter == alpha)
             {
-                text[x] == argv[y];
+                text[x] = argv[y];
             }
         }
     }

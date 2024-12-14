@@ -46,6 +46,7 @@ int main() {
         else if (length == 16)
         {
             int d = cardNum / pow(10, 15);
+            printf("check\n");
             if (d == 5)
             {
                 int d2 = cardNum / pow(10, 14);

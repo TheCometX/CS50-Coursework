@@ -26,19 +26,18 @@ int main() {
     printf("%i\n", length);
     if (result % 10 == 0)
     {
-        printf("VALID\n");
         if (length == 13)
         {
-            if (cardNum / pow(10, 13) == 4)
+            if (cardNum / pow(10, 12) == 4)
             {
                 printf("VISA\n");
             }
         }
         else if (length == 15)
         {
-            if (cardNum / pow(10, 15) == 3)
+            if (cardNum / pow(10, 14) == 3)
             {
-                int d = cardNum / pow(10, 14);
+                int d = cardNum / pow(10, 13);
                 if (d == 4 || d == 7)
                 {
                     printf("AMEX\n");
@@ -47,10 +46,10 @@ int main() {
         }
         else if (length == 16)
         {
-            int d = cardNum / pow(10, 16);
+            int d = cardNum / pow(10, 15);
             if (d == 5)
             {
-                int d2 = cardNum / pow(10, 15);
+                int d2 = cardNum / pow(10, 14);
                 if (d2 <= 5 && d2 > 0)
                 {
                     printf("MASTERCARD\n");

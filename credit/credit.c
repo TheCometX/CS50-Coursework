@@ -7,7 +7,7 @@ int main() {
     int length = 0;
     int result = 0;
 
-    for (long int x = 1; x <= cardNum; x = pow(x, 10))
+    for (long int x = 1; x <= cardNum; x *= 10)
     {
         length += 1;
         int digit = cardNum / x;

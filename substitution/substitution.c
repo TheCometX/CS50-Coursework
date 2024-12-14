@@ -19,13 +19,13 @@ int main(int argc, string argv[]) {
 
     for (int x = 0; x < strlen(text); x++)
     {
-        char letter = tolower(text[x]);
+        char letter = text[x];
         for (int y = 0; y < 26; y++)
         {
             char alpha = letters[y];
-            if (letter == alpha)
+            if (tolower(letter) == alpha)
             {
-                if (isupper())
+                if (isupper(letter))
                 {
                     text[x] = argv[1][y];
                 }

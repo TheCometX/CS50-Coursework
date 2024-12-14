@@ -27,7 +27,7 @@ int main(int argc, string argv[]) {
             {
                 if (isupper(letter))
                 {
-                    text[x] = argv[1][y];
+                    text[x] = toupper(argv[1][y]);
                 }
                 else
                 {

@@ -15,6 +15,7 @@ int main() {
         printf("%i\n", digit);
         if (length % 2 == 0)
         {
+            printf("%i\n", digit);
             int digit2 = digit * 2;
             result += digit2 % 10;
             result += digit2 / 10;

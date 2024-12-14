@@ -22,7 +22,7 @@ int main(int argc, string argv[]) {
             printf("Key must contain only letters\n");
             return 1;
         }
-        else if (strchr(key) != strrchr(key))
+        else if (strchr(key, argv[1]) != strrchr(key, argv[1]))
         {
             printf("Repeating character\n");
             return 1;

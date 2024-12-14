@@ -13,11 +13,12 @@ int main() {
     if (points(word1) == points(word2)) {
         printf("Tie!\n");
     }
-    // check which are greater
     else {
+        // check if word 1 is greater
         if (points(word1) > points(word2)) {
             printf("Player 1 wins!\n");
         }
+        // word 1 isn't greater
         else {
             printf("Player 2 wins!\n");
         }
@@ -25,6 +26,7 @@ int main() {
 }
 
 int points(string word) {
+    // the total and length of string
     int total = 0;
     int len = strlen(word);
     int y = 0;
@@ -72,6 +74,7 @@ int points(string word) {
                 }
             }
         }
+        // inscrease the index number
         y++;
     }
     return total;

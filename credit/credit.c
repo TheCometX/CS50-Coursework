@@ -27,7 +27,8 @@ int main() {
     {
         if (length == 13)
         {
-            if (cardNum / pow(10, 12) == 4)
+            int first = cardNum / pow(10, 12);
+            if (first == 4)
             {
                 printf("VISA\n");
             }

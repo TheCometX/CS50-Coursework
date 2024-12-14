@@ -25,7 +25,7 @@ int main(int argc, string argv[]) {
             char alpha = letters[y];
             if (letter == alpha)
             {
-                if (x == 0)
+                if (isupper())
                 {
                     text[x] = argv[1][y];
                 }

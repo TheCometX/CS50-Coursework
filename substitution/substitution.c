@@ -30,5 +30,5 @@ int main(int argc, string argv[]) {
         }
     }
 
-    printf("%s", text);
+    printf("%s\n", text);
 }

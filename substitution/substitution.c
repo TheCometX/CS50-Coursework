@@ -25,7 +25,7 @@ int main(int argc, string argv[]) {
             char alpha = letters[y];
             if (letter == alpha)
             {
-                text[x] = argv[y];
+                text[x] = argv[1][y];
             }
         }
     }

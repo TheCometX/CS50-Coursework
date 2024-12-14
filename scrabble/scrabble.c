@@ -8,9 +8,11 @@ int points(string word);
 int main() {
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
+    // check if the words are the same (tie)
     if (points(word1) == points(word2)) {
         printf("Tie!\n");
     }
+    // check which are greater
     else {
         if (points(word1) > points(word2)) {
             printf("Player 1 wins!\n");

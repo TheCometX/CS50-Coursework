@@ -10,8 +10,9 @@ int main() {
     for (long int x = 1; x <= cardNum; x *= 10)
     {
         length += 1;
-        int digit = cardNum / x;
-        printf("%i", digit);
+        long int div = cardNum / x;
+        int digit = div % 10;
+        printf("%i\n", digit);
         if (length % 2 == 0)
         {
             int digit2 = digit * 2;

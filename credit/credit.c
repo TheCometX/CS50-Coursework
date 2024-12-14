@@ -7,7 +7,7 @@ int main() {
     int length = 0;
     int result = 0;
 
-    for (long int x = 1; x <= cardNum; pow(x, 10))
+    for (long int x = 1; x <= cardNum; x = pow(x, 10))
     {
         length += 1;
         int digit = cardNum / x;
@@ -19,7 +19,7 @@ int main() {
         }
         else
         {
-            result += digit
+            result += digit;
         }
     }
 
@@ -46,7 +46,19 @@ int main() {
         }
         else if (length == 16)
         {
-
+            int d = cardNum / pow(10, 16);
+            if (d == 5)
+            {
+                int d2 = cardNum / pow(10, 15);
+                if (d2 <= 5 && d2 > 0)
+                {
+                    printf("MASTERCARD\n");
+                }
+            }
+            else if (d == 4)
+            {
+                printf("VISA\n");
+            }
         }
     }
     else

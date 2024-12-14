@@ -34,28 +34,20 @@ int main() {
         }
         else if (length == 15)
         {
-            if (cardNum / pow(10, 14) == 3)
+            int first = cardNum / pow(10, 13) == 3;
+            if (2first == 34 || 2first == 37)
             {
-                int d = cardNum / pow(10, 13);
-                if (d == 4 || d == 7)
-                {
-                    printf("AMEX\n");
-                }
+                printf("AMEX\n");
             }
         }
         else if (length == 16)
         {
-            int d = cardNum / pow(10, 15);
-            printf("check\n");
-            if (d == 5)
+            int d = cardNum / pow(10, 14);
+            if (d <= 55 && d >= 51)
             {
-                int d2 = cardNum / pow(10, 14);
-                if (d2 <= 5 && d2 > 0)
-                {
-                    printf("MASTERCARD\n");
-                }
+                printf("MASTERCARD\n");
             }
-            else if (d == 4)
+            else if (d \ 10 == 4)
             {
                 printf("VISA\n");
             }

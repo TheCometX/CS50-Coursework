@@ -9,8 +9,10 @@ int main() {
     for (long int x = 1; x <= cardNum; pow(x, 10))
     {
         length += 1;
+        int digit = cardNum / x;
         if (length % 2 == 0)
         {
+            digit *= 2;
             
         }
     }

@@ -23,13 +23,24 @@ int main() {
         }
     }
 
-    if (length == 13)
+    if (result % 10 == 0)
     {
+        printf("VALID\n");
+        if (length == 13)
+        {
 
+        }
+        else if (length == 15)
+        {
+
+        }
+        else if (length == 16)
+        {
+
+        }
     }
-    else if (length == 15)
+    else
     {
-
+        printf("INVALID\n");
     }
-    else if ()
 }

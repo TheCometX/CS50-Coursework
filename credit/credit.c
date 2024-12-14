@@ -28,11 +28,21 @@ int main() {
         printf("VALID\n");
         if (length == 13)
         {
-            
+            if (cardNum / pow(10, 13) == 4)
+            {
+                printf("VISA\n");
+            }
         }
         else if (length == 15)
         {
-
+            if (cardNum / pow(10, 15) == 3)
+            {
+                int d = cardNum / pow(10, 14);
+                if (d == 4 || d == 7)
+                {
+                    printf("AMEX\n");
+                }
+            }
         }
         else if (length == 16)
         {

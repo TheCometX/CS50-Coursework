@@ -27,11 +27,11 @@ int main(int argc, string argv[]) {
             {
                 if (x == 0)
                 {
-                    text[x] = toupper(argv[1][y]);
+                    text[x] = argv[1][y];
                 }
                 else
                 {
-                    text[x] = argv[1][y];
+                    text[x] = tolower(argv[1][y]);
                 }
             }
         }

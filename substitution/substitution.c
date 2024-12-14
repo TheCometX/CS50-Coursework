@@ -18,4 +18,15 @@ int main(int argc, string argv[]) {
     string text = get_string("plaintext: ");
 
     for (int x = 0; x < strlen(text); x++)
+    {
+        char letter = text[x];
+        for (int y = 0; y < 26; y++)
+        {
+            char alpha = letters[y];
+            if (strcmp(letter, alpha) == 0)
+            {
+                text[x] == argv[y];
+            }
+        }
+    }
 }

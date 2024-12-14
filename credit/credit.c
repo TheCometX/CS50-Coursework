@@ -23,6 +23,7 @@ int main() {
         }
     }
 
+    printf("%i\n", length);
     if (result % 10 == 0)
     {
         printf("VALID\n");

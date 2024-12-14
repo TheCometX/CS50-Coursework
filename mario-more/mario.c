@@ -9,7 +9,7 @@ int main(void)
   {
     height = get_int("What's the height? ");      //It will be asked until number be higher than 0
   }
-  while (height < 0);
+  while (height <= 0);
   for (int z = 1; z <= height; z++)   //z start in 1 because if start in 0 the first repetition will just print a white line
     {
     for (int x = height - z; x > 0; x--) // This loop make the spaces before #

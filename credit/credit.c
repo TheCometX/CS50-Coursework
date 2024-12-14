@@ -11,6 +11,7 @@ int main() {
     {
         length += 1;
         int digit = cardNum / x;
+        printf("%i", digit);
         if (length % 2 == 0)
         {
             int digit2 = digit * 2;

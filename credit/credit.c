@@ -9,6 +9,9 @@ int main() {
     for (long int x = 1; x <= cardNum; pow(x, 10))
     {
         length += 1;
-        if (
+        if (length % 2 == 0)
+        {
+            
+        }
     }
 }

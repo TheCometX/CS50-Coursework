@@ -31,6 +31,10 @@ int main() {
             {
                 printf("VISA\n");
             }
+            else
+            {
+                printf("INVALID\n");
+            }
         }
         else if (length == 15)
         {
@@ -38,6 +42,10 @@ int main() {
             if (first == 34 || first == 37)
             {
                 printf("AMEX\n");
+            }
+            else
+            {
+                printf("INVALID\n");
             }
         }
         else if (length == 16)
@@ -51,6 +59,14 @@ int main() {
             {
                 printf("VISA\n");
             }
+            else
+            {
+                printf("INVALID\n");
+            }
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
     else

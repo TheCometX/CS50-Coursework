@@ -13,9 +13,9 @@ int main() {
         int digit = cardNum / x;
         if (length % 2 == 0)
         {
-            digit *= 2;
-            result += digit % 10;
-            result += digit / 10;
+            int digit2 = digit * 2;
+            result += digit2 % 10;
+            result += digit2 / 10;
         }
         else
         {
@@ -28,7 +28,7 @@ int main() {
         printf("VALID\n");
         if (length == 13)
         {
-
+            if
         }
         else if (length == 15)
         {

@@ -34,7 +34,7 @@ int main() {
         }
         else if (length == 15)
         {
-            int first = cardNum / pow(10, 13) == 3;
+            int first = cardNum / pow(10, 13);
             if (first == 34 || first == 37)
             {
                 printf("AMEX\n");

@@ -22,7 +22,7 @@ int main() {
             result += digit;
         }
     }
-
+    printf("%i", result);
     printf("%i\n", length);
     if (result % 10 == 0)
     {

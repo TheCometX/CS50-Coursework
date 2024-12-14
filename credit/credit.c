@@ -39,11 +39,11 @@ int main() {
     if (total % 10 == 0) {
       printf("VALID\n");
       if (length == 15 && (total2 == 7 || total2 == 10)){
-        printf("American Express\n");
+        printf("AMEX\n");
       }
       else {
         if (length == 16 && (total2 == 6 || total2 == 7 || total2 == 8 || total2 == 9 || total2 == 10)) {
-            printf("MasterCard\n");
+            printf("MASTERCARD\n");
         }
         else {
             if ((length == 13 || length == 16) && total3 == 4) {

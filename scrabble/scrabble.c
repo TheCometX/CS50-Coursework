@@ -3,6 +3,7 @@
 #include <cs50.h>
 #include <ctype.h>
 
+// function used to find the points of the word
 int points(string word);
 
 int main() {
@@ -29,7 +30,7 @@ int points(string word) {
     int y = 0;
     // loop to check letter per letter
     while (y < len) {
-        // upper case the letter
+        // index and upper case the letter
         char digit = toupper(word[y]);
         // check the letters with value 1
         if (digit == 'A' || digit == 'E' || digit == 'I' || digit == 'L' || digit == 'N' || digit == 'O' || digit == 'R' || digit == 'S' || digit == 'T' || digit == 'U') {

@@ -32,6 +32,7 @@ int main()
         // check for VISA with 13 digits
         if (length == 13)
         {
+            // get the 2 first digits
             int first = cardNum / pow(10, 12);
             if (first == 4)
             {
@@ -45,6 +46,7 @@ int main()
         // check for AMEX
         else if (length == 15)
         {
+            // get the two first digits
             int first = cardNum / pow(10, 13);
             if (first == 34 || first == 37)
             {
@@ -58,11 +60,13 @@ int main()
         // check for MASTERCARD and VISA with 16 digits
         else if (length == 16)
         {
+            // get the 2 first digits
             int first = cardNum / pow(10, 14);
             if (first <= 55 && first >= 51)
             {
                 printf("MASTERCARD\n");
             }
+            // check if the first digit is 4 (VISA)
             else if (first / 10 == 4)
             {
                 printf("VISA\n");

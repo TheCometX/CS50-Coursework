@@ -28,7 +28,7 @@ int main() {
         printf("VALID\n");
         if (length == 13)
         {
-            if
+            
         }
         else if (length == 15)
         {

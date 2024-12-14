@@ -23,5 +23,13 @@ int main() {
         }
     }
 
-    if ()
+    if (length == 13)
+    {
+
+    }
+    else if (length == 15)
+    {
+
+    }
+    else if ()
 }

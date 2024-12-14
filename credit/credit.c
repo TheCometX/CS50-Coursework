@@ -1,17 +1,20 @@
-#include <stdio.h>
 #include <cs50.h>
 #include <math.h>
+#include <stdio.h>
 
-int main() {
+int main()
+{
     long int cardNum = get_long("Number: ");
     int length = 0;
     int result = 0;
 
+    // Luhn's Algorithm
     for (long int x = 1; x <= cardNum; x *= 10)
     {
         length += 1;
         long int div = cardNum / x;
         int digit = div % 10;
+        // choose the digits to be multiplied (start in the second)
         if (length % 2 == 0)
         {
             int digit2 = digit * 2;
@@ -23,8 +26,10 @@ int main() {
             result += digit;
         }
     }
+    // check if the luhn's algorithm result is valid
     if (result % 10 == 0)
     {
+        // check for VISA with 13 digits
         if (length == 13)
         {
             int first = cardNum / pow(10, 12);
@@ -37,6 +42,7 @@ int main() {
                 printf("INVALID\n");
             }
         }
+        // check for AMEX
         else if (length == 15)
         {
             int first = cardNum / pow(10, 13);
@@ -49,6 +55,7 @@ int main() {
                 printf("INVALID\n");
             }
         }
+        // check for MASTERCARD and VISA with 16 digits
         else if (length == 16)
         {
             int first = cardNum / pow(10, 14);
@@ -70,6 +77,7 @@ int main() {
             printf("INVALID\n");
         }
     }
+    // if Luhn's algorithm result is invalid
     else
     {
         printf("INVALID\n");

@@ -18,7 +18,7 @@ int main() {
             printf("%i\n", digit);
             int digit2 = digit * 2;
             result += digit2 % 10;
-            result += digit2 / 10;
+            result += digit2 / 1;
         }
         else
         {

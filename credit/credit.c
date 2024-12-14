@@ -35,19 +35,19 @@ int main() {
         else if (length == 15)
         {
             int first = cardNum / pow(10, 13) == 3;
-            if (2first == 34 || 2first == 37)
+            if (first == 34 || first == 37)
             {
                 printf("AMEX\n");
             }
         }
         else if (length == 16)
         {
-            int d = cardNum / pow(10, 14);
-            if (d <= 55 && d >= 51)
+            int first = cardNum / pow(10, 14);
+            if (first <= 55 && first >= 51)
             {
                 printf("MASTERCARD\n");
             }
-            else if (d \ 10 == 4)
+            else if (first / 10 == 4)
             {
                 printf("VISA\n");
             }

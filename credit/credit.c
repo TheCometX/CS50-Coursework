@@ -12,6 +12,7 @@ int main() {
         length += 1;
         long int div = cardNum / x;
         int digit = div % 10;
+        printf("%i\n", digit);
         if (length % 2 == 0)
         {
             int digit2 = digit * 2;
@@ -23,6 +24,8 @@ int main() {
             result += digit;
         }
     }
+    printf("%i\n", length);
+    printf("%i\n", result);
     if (result % 10 == 0)
     {
         if (length == 13)

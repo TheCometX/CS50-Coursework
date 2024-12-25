@@ -32,8 +32,20 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
+    int16_t b;
 
-    
+    for (int x = 0; x < HEADER_SIZE; x += 2)
+    {
+        fread(&b, sizeof(b), 1, input);
+        fwrite(&b, sizeof(b), 1, output);
+    }
+
+    while (fread(&b, sizeof(b), 1, input) != 0)
+    {
+        b *= factor;
+        fwrite(&b, sizeof(b), 1, output);
+    }
+
     // Close files
     fclose(input);
     fclose(output);

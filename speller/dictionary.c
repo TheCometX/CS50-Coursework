@@ -48,15 +48,13 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    char* word;
     node* n = malloc(sizeof(node));
     if (n == NULL)
     {
         return false;
     }
-    while(fscanf(dict, "%s", word) != EOF)
+    while(fscanf(dict, "%s", n->word) != EOF)
     {
-        strcpy(n->word, word);
         n->next = NULL;
 
         unsigned int index = hash(word);

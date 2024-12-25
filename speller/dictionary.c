@@ -45,8 +45,22 @@ bool load(const char *dictionary)
     node* n = malloc(sizeof(node));
     while(fscanf(dict, "%s", word) != EOF)
     {
-        strcpy()
+        strcpy(n->word, word);
+        n->next = NULL;
 
+        unsigned int index = hash(word);
+
+        if (table[index] == NULL)
+        {
+            table[index] = n;
+        }
+        else
+        {
+            for (node* current = table[index]; current != NULL; current = current->next)
+            {
+                
+            }
+        }
     }
 
     return false;

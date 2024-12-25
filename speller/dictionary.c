@@ -38,10 +38,9 @@ bool load(const char *dictionary)
     FILE* dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
-        printf("Cannot open the file\n");
         return false;
     }
-    
+
     return false;
 }
 

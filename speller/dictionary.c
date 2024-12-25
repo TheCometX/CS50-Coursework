@@ -40,7 +40,11 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    
+    char* word;
+    while(fscanf(dict, "%s", word) != EOF)
+    {
+        
+    }
 
     return false;
 }

@@ -35,7 +35,8 @@ unsigned int hash(const char *word)
         char c = word[x];
         index += c;
     }
-    index %= N
+    index %= N;
+    return index;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

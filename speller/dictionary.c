@@ -57,7 +57,7 @@ bool load(const char *dictionary)
     {
         n->next = NULL;
 
-        unsigned int index = hash(word);
+        unsigned int index = hash(n->word);
 
         if (table[index] == NULL)
         {

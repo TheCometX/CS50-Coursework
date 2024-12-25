@@ -55,6 +55,10 @@ bool load(const char *dictionary)
     }
     while(fscanf(dict, "%s", word) != EOF)
     {
+        for (int y = 0, len = strlen(word); y < len; y++)
+        {
+            word[y] = tolower(word[y]);
+        }
         strcpy(n->word, word);
         n->next = NULL;
 

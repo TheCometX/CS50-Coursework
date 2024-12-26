@@ -71,7 +71,7 @@ bool load(const char *dictionary)
     while(fscanf(dict, "%s", n->word) != EOF)
     {
         n->next = NULL;
-
+        printf("check\n");
         unsigned int index = hash(n->word);
 
         if (table[index] == NULL)

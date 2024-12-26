@@ -108,7 +108,12 @@ bool unload(void)
         }
         else
         {
-
+            for (node* current = table[x]; current != NULL; current = current->next)
+            {
+                node* next = current->next;
+                free(current);
+                current = next;
+            }
         }
     }
     return false;

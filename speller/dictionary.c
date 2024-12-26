@@ -59,6 +59,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE* dict = fopen(dictionary, "r");
+    printf("check1\n");
     if (dict == NULL)
     {
         return false;
@@ -71,7 +72,7 @@ bool load(const char *dictionary)
     while(fscanf(dict, "%s", n->word) != EOF)
     {
         n->next = NULL;
-        printf("check\n");
+        printf("check2\n");
         unsigned int index = hash(n->word);
 
         if (table[index] == NULL)

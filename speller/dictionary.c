@@ -63,37 +63,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    node* n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        return false;
-    }
-    while(fscanf(dict, "%s", n->word) != EOF)
-    {
-        n->next = NULL;
-        unsigned int index = hash(n->word);
-
-        if (table[index] == NULL)
-        {
-            table[index] = n;
-            tableSize++;
-            return true;
-        }
-        else
-        {
-            for (node* current = table[index]; current != NULL; current = current->next)
-            {
-                if (current->next == NULL)
-                {
-                    current->next = n;
-                    tableSize++;
-                    return true;
-                }
-            }
-        }
-    }
-
-    return false;
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded

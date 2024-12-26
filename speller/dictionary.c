@@ -42,7 +42,14 @@ unsigned int hash(const char *word)
     for (int x = 0, len = strlen(word); x < len; x++)
     {
         char c = word[x];
-        index += c;
+        if (c > 90)
+        {
+            index += (c-32);
+        }
+        else
+        {
+            index += c;
+        }
     }
     index %= N;
     return index;

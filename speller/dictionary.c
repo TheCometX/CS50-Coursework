@@ -92,7 +92,6 @@ bool unload(void)
         if (list == NULL)
         {
             empty++;
-            continue;
         }
         else
         {
@@ -105,6 +104,14 @@ bool unload(void)
             }
             empty++;
         }
+    }
+    if (empty == N)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }
 

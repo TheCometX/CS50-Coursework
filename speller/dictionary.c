@@ -24,6 +24,11 @@ int tableSize = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    for (int y = 0, len = strlen(word); y < len; y++)
+    {
+        word[y] = tolower(word[y]);
+    }
+
     unsigned int index = hash(word);
     for (node* current = table[index]; current != NULL; current = current->next)
     {

@@ -85,33 +85,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    int listsEmpty = 0;
-    for (int x = 0; x < N; x++)
-    {
-        node* list = table[x];
-        if (list == NULL)
-        {
-            listsEmpty++;
-            continue;
-        }
-        else
-        {
-            for (node* current = table[x]; current != NULL; current = current->next)
-            {
-                node* next = current->next;
-                free(current);
-                current = next;
-            }
-            listsEmpty++;
-        }
-    }
-    if (listsEmpty == 1000)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    
 }
 

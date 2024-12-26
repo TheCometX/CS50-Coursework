@@ -99,11 +99,13 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+    int listsEmpty = 0;
     for (int x = 0; x < N; x++)
     {
         node* list = table[x];
         if (list == NULL)
         {
+            listsEmpty++;
             continue;
         }
         else
@@ -114,8 +116,16 @@ bool unload(void)
                 free(current);
                 current = next;
             }
+            listsEmpty++;
         }
     }
-    return false;
+    if (listsEmpty == 1000)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 

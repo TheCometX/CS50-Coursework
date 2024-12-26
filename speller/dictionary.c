@@ -19,7 +19,6 @@ const unsigned int N = 1000;
 
 // Hash table
 node *table[N];
-int tableSize = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -66,9 +65,7 @@ bool load(const char *dictionary)
     char word[LENGTH];
 
     while (fscanf(dict, "%s, word) != EOF)
-    {
-        node* w 
-    }
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded

@@ -72,7 +72,9 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(w->word, word);
-        int index
+        int index = hash(word);
+        w->next = table[index];
+        table[index] = w;
     }
 }
 

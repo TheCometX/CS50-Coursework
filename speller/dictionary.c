@@ -28,7 +28,7 @@ bool check(const char *word)
     unsigned int index = hash(word);
     for (node* current = table[index]; current != NULL; current = current->next)
     {
-        if (strcasecmp(current->word, word))
+        if (strcasecmp(current->word, word) == 0)
         {
             return true;
         }

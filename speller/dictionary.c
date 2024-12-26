@@ -58,7 +58,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    char word[LENGTH];
+    char word[LENGTH + 1];
 
     while (fscanf(dict, "%s", word) != EOF)
     {
@@ -85,6 +85,21 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+    for (int x = 0; x < N; x++)
+    {
+        node* list = table[x];
+        if (list == NULL)
+        {
+            continue;
+        }
+        else
+        {
+            for(node* current = list; current != NULL; current = current->next)
+            {
+                list = current->next;
+                free(current)
+            }
+        }
+    }
 }
 

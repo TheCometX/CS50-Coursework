@@ -74,6 +74,7 @@ bool load(const char *dictionary)
         table[index] = w;
         table_size++;
     }
+    fclose(dict);
     return true;
 }
 

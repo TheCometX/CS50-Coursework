@@ -67,7 +67,7 @@ bool load(const char *dictionary)
 
     while (fscanf(dict, "%s, word) != EOF)
     {
-        
+        node* w 
     }
 }
 

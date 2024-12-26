@@ -71,13 +71,15 @@ bool load(const char *dictionary)
         int index = hash(word);
         w->next = table[index];
         table[index] = w;
+        table_size++;
     }
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    return tableSize;
+    return table_size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false

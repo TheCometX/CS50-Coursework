@@ -94,10 +94,12 @@ bool unload(void)
         }
         else
         {
-            for(node* current = list; current != NULL; current = current->next)
+            node* current = list;
+            while (current != NULL)
             {
-                list = current->next;
-                free(current)
+                node* temp = current;
+                current = current->next;
+                free(temp);
             }
         }
     }

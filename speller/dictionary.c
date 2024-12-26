@@ -72,6 +72,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(w->word, word);
+        int index
     }
 }
 

@@ -38,20 +38,15 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     unsigned int index = 0;
-    for (int x = 0, len = strlen(word); x < len; x++)
+    for (int y = 0, l = strlen(word); y < l; y++)
     {
-        char c = word[x];
-        if (c > 90)
+        char c = word[y];
+        if (isalpha(c))
         {
-            index += (c-32);
-        }
-        else
-        {
-            index += c;
+            index += tolower(c);
         }
     }
-    index %= N;
-    return index;
+    return index % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false

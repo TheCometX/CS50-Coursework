@@ -8,12 +8,13 @@ def main():
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
     # TODO: Read database file into a variable
+    data = []
     with open(sys.argv[1], "r") as database:
         next(database)
         reader = csv.reader(database)
 
         for row in reader:
-            print(row)
+            data.append(row)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as sequences:
         sequence = sequences.read()

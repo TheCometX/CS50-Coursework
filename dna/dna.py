@@ -14,8 +14,6 @@ def main():
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
-            print(sequence)
-
             AGAT = longest_match(sequence, "AGAT")
             AATG = longest_match(sequence, "AATG")
             TATC = longest_match(sequence, "TATC")

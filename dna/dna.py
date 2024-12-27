@@ -4,27 +4,17 @@ import sys
 
 def main():
 
-    counts = []
+    database = []
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
 
-    with open(sys.argv[1], "r") as database:
-        data = csv.DictReader(database)
-
-        with open(sys.argv[2], "r") as sequences:
-            sequence = sequences.read()
-
-            for row in data:
-                for key in row:
-                    if key == 'name':
-                        continue
-                    else:
-                        counts.append(longest_match(sequence, key))
-                break
+    with open(sys.argv[1], "r") as file1:
+        data = csv.reader(file1)
 
         for row in data:
-            print(row)
+            database.append(row)
 
+    print(database)
 
     return
 

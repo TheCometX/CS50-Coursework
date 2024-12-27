@@ -4,6 +4,7 @@ import sys
 
 def main():
 
+    inf = []
     database = []
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
@@ -11,10 +12,22 @@ def main():
     with open(sys.argv[1], "r") as file1:
         data = csv.reader(file1)
 
+        with open(sys.argv[2], "r") as file2:
+            sequence = file2.read()
+
         for row in data:
             database.append(row)
+            if row[0] == 'name':
+                for n in row:
+                    if n == 'name':
+                        inf.append(n)
+                    else:
+                        inf.append(longest_match(sequence, n))
 
+    print(inf)
     print(database)
+
+
 
     return
 

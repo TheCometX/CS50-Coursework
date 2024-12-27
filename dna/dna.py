@@ -4,7 +4,6 @@ import sys
 
 def main():
 
-    inf = []
     alleles = []
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")

@@ -10,7 +10,7 @@ def main():
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as database:
         next(database)
-        data = csv.reader(database)
+        reader = csv.reader(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as sequences:
         sequence = sequences.read()
@@ -20,8 +20,8 @@ def main():
     TATC = longest_match(sequence, "TATC")
     # TODO: Check database for matching profiles
 
-    for row in data:
-        if data[1] == AGAT and data[2] == AATG and data[3] == TATC:
+    for row in reader:
+        if row[1] == AGAT and row[2] == AATG and row[3] == TATC:
             print(data[0])
             break
     return

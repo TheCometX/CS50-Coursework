@@ -14,6 +14,7 @@ def main():
         for row in data:
             alleles.append(row)
 
+    
 
     print(alleles)
 

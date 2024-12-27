@@ -23,8 +23,17 @@ def main():
         else:
             alleles.append(i)
 
+    allele_count = []
+
+    with open(sys.argv[2], "r") as file2:
+        sequence = file2.read()
+
+        for a in alleles:
+            allele_count.append(longest_match(sequence, a))
+
     print(database)
     print(alleles)
+    print(allele_count)
 
     return
 

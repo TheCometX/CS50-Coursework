@@ -9,14 +9,19 @@ def main():
         print("Usage python dna.py databases/csv_file text_file")
 
     with open(sys.argv[1], "r") as database:
-        data = csv.reader(database)
+        data = csv.DictReader(database)
 
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
             for row in data:
-                for i in row:
-                    print(i)
+                for key in row:
+                    if key == 'name':
+                        continue
+                    else:
+                        counts.append(longest_match(sequence, key))
+                break
+    
 
 
     return

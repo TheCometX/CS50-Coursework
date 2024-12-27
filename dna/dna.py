@@ -11,6 +11,7 @@ def main():
         next(database)
         data = csv.reader(database)
 
+
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
@@ -18,7 +19,9 @@ def main():
             AATG = longest_match(sequence, "AATG")
             TATC = longest_match(sequence, "TATC")
 
-            for row in reader:
+            print(AGAT, AATG, TATC)
+
+            for row in data:
                 if row[1] == AGAT and row[2] == AATG and row[3] == TATC:
                     print(data[0])
                     break

@@ -11,7 +11,8 @@ def main():
     with open(sys.argv[1], "r") as database:
         data = csv.DictReader(database)
 
-        print(data["name"])
+        for row in data:
+            print(row["AGATC"])
 
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()

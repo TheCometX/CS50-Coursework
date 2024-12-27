@@ -11,6 +11,9 @@ def main():
     with open(sys.argv[1], "r") as database:
         next(database)
         reader = csv.reader(database)
+
+        for row in reader:
+            print(row)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as sequences:
         sequence = sequences.read()
@@ -20,10 +23,7 @@ def main():
     TATC = longest_match(sequence, "TATC")
     # TODO: Check database for matching profiles
 
-    for row in reader:
-        if row[1] == AGAT and row[2] == AATG and row[3] == TATC:
-            print(data[0])
-            break
+
     return
 
 

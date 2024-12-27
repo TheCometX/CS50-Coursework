@@ -4,26 +4,24 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
-    # TODO: Read database file into a variable
-    data = []
+
     with open(sys.argv[1], "r") as database:
         next(database)
-        reader = csv.reader(database)
+        data = csv.reader(database)
 
-        for row in reader:
-            data.append()
-    # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2], "r") as sequences:
-        sequence = sequences.read()
-    # TODO: Find longest match of each STR in DNA sequence
-    AGAT = longest_match(sequence, "AGAT")
-    AATG = longest_match(sequence, "AATG")
-    TATC = longest_match(sequence, "TATC")
-    # TODO: Check database for matching profiles
+        with open(sys.argv[2], "r") as sequences:
+            sequence = sequences.read()
 
+            AGAT = longest_match(sequence, "AGAT")
+            AATG = longest_match(sequence, "AATG")
+            TATC = longest_match(sequence, "TATC")
+
+            for row in reader:
+                if row[1] == AGAT and row[2] == AATG and row[3] == TATC:
+                    print(data[0])
+                    break
 
     return
 

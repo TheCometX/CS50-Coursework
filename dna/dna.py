@@ -21,7 +21,9 @@ def main():
                     else:
                         counts.append(longest_match(sequence, key))
                 break
-    
+
+        for row in data:
+            print(row)
 
 
     return

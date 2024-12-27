@@ -20,7 +20,7 @@ def main():
     # TODO: Check database for matching profiles
 
     for row in data:
-        if data[1] = AGAT and data[2] = AATG and data[3] = TATC:
+        if data[1] == AGAT and data[2] == AATG and data[3] == TATC:
             print(data[0])
             break
     return

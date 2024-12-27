@@ -14,7 +14,7 @@ def main():
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
-            for allele in range(1, len(data[0])):
+            for allele in data[0]:
                 counts.append(longest_match(allele))
     return
 

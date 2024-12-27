@@ -24,7 +24,9 @@ def main():
                     else:
                         inf.append(longest_match(sequence, n))
 
+    print(inf)
     for x in database:
+        print(x)
         for i in range(1, len(x)):
             if x[i] == inf[i]:
                 print(database[0])

@@ -14,7 +14,7 @@ def main():
         reader = csv.reader(database)
 
         for row in reader:
-            data.append(row)
+            data.append()
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as sequences:
         sequence = sequences.read()

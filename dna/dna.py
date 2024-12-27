@@ -24,8 +24,8 @@ def main():
                     else:
                         inf.append(longest_match(sequence, n))
 
-    print(inf)
-    print(database)
+    for x in database:
+        
 
 
 

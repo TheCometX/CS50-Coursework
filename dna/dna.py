@@ -15,9 +15,16 @@ def main():
         for row in data:
             database.append(row)
 
+    alleles = []
 
+    for i in database[0]:
+        if i == 'name':
+            continue
+        else:
+            alleles.append(i)
 
     print(database)
+    print(alleles)
 
     return
 

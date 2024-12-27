@@ -9,12 +9,14 @@ def main():
         print("Usage python dna.py databases/csv_file text_file")
 
     with open(sys.argv[1], "r") as database:
-        data = csv.reader(database)
+        data = csv.DictReader(database)
 
-        print(data[0][1])
+        print(data["name"])
 
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
+
+
 
 
     return

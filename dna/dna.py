@@ -15,9 +15,8 @@ def main():
             sequence = sequences.read()
 
             for row in data:
-                for i in range(1, len(row[0])):
-                    allele = row[0][i]
-                    print(allele)
+                for i in row:
+                    print(i)
 
 
     return

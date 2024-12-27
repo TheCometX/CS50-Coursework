@@ -11,6 +11,9 @@ def main():
         next(database)
         data = csv.reader(database)
 
+        for row in data:
+            print(row)
+
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 

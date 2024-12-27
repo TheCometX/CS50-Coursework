@@ -25,7 +25,10 @@ def main():
                         inf.append(longest_match(sequence, n))
 
     for x in database:
-        
+        for i in range(1, len(x)):
+            if x[i] == inf[i]:
+                print(database[0])
+                break
 
 
 

@@ -13,9 +13,8 @@ def main():
         data = csv.reader(file1)
 
         for row in data:
-            row.remove(row[0])
             alleles.append(row)
-    
+
 
     print(alleles)
 

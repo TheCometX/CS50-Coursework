@@ -11,11 +11,12 @@ def main():
     with open(sys.argv[1], "r") as database:
         data = csv.reader(database)
 
+        print(row[0])
+
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
-            for allele in data[0]:
-                counts.append(longest_match(allele))
+
     return
 
 

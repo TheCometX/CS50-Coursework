@@ -13,9 +13,10 @@ def main():
         data = csv.reader(file1)
 
         for row in data:
+            row.remove(row[0])
             database.append(row)
-            
 
+    print(database)
 
     return
 

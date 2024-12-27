@@ -11,7 +11,7 @@ def main():
     with open(sys.argv[1], "r") as database:
         data = csv.reader(database)
 
-        print(row[0])
+        print(data[0][1])
 
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()

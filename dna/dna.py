@@ -11,13 +11,13 @@ def main():
     with open(sys.argv[1], "r") as database:
         data = csv.reader(database)
 
-        for row in data:
-            print(row)
-
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
-
+            for row in data:
+                for i in range(1, len(row[0])):
+                    allele = row[0][i]
+                    print(allele)
 
 
     return

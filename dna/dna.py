@@ -5,7 +5,7 @@ import sys
 def main():
 
     inf = []
-    database = []
+    alleles = []
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
 
@@ -14,7 +14,7 @@ def main():
 
         for row in data:
             row.remove(row[0])
-            database.append(row)
+            alleles.append(row)
 
     print(database)
 

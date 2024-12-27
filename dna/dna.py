@@ -9,7 +9,6 @@ def main():
         print("Usage python dna.py databases/csv_file text_file")
 
     with open(sys.argv[1], "r") as database:
-        next(database)
         data = csv.reader(database)
 
         with open(sys.argv[2], "r") as sequences:

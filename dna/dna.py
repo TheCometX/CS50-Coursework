@@ -12,26 +12,9 @@ def main():
     with open(sys.argv[1], "r") as file1:
         data = csv.reader(file1)
 
-        with open(sys.argv[2], "r") as file2:
-            sequence = file2.read()
-
         for row in data:
             database.append(row)
-            if row[0] == 'name':
-                for n in row:
-                    if n == 'name':
-                        inf.append(n)
-                    else:
-                        inf.append(longest_match(sequence, n))
-
-    print(inf)
-    for x in database:
-        print(x)
-        for i in range(1, len(x)):
-            if x[i] == inf[i]:
-                print(database[0])
-                break
-
+            
 
 
     return

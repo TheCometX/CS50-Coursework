@@ -4,6 +4,7 @@ import sys
 
 def main():
 
+    counts = []
     if len(sys.argv) != 3:
         print("Usage python dna.py databases/csv_file text_file")
 
@@ -14,8 +15,16 @@ def main():
         with open(sys.argv[2], "r") as sequences:
             sequence = sequences.read()
 
-
+            for allele in range(1, len(data[0])):
+                counts.append(longest_match(allele))
     return
+
+
+
+
+
+
+
 
 
 def longest_match(sequence, subsequence):

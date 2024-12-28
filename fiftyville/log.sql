@@ -57,5 +57,18 @@ SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7
 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
 
 /*
-*/
-
++---------+----------------+
+|  name   | account_number |
++---------+----------------+
+| Bruce   | 49610011       |
+| Diana   | 26013199       |
+| Brooke  | 16153065       |
+| Kenny   | 28296815       |
+| Iman    | 25506511       |
+| Luca    | 28500762       |
+| Taylor  | 76054385       |
+| Benista | 81061156       |
++---------+----------------+ */
+SELECT name, account_number FROM people, bank_accounts WHERE people.id = person_id AND account_number IN
+(SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7 AND day = 28
+AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw');

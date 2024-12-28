@@ -92,3 +92,11 @@ WHERE atm_transactions.account_number = bank_accounts.account_number AND person_
 AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw' AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05));
+
+
+
+SELECT flight_id, seat, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people, bank_accounts, atm_transactions
+WHERE atm_transactions.account_number = bank_accounts.account_number AND person_id = people.id
+AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
+AND transaction_type = 'withdraw' AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05));

@@ -153,9 +153,9 @@ IN (SELECT phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce') OR ca
 WHERE name = 'Luca' OR name = 'Bruce');
 
 /* dewstination of thief:
-+-------------------+
-|     full_name     |
-+-------------------+
-| LaGuardia Airport |
-+-------------------+ */
-SELECT full_name FROM airports WHERE id = 4;
++-------------------+---------------+
+|     full_name     |     city      |
++-------------------+---------------+
+| LaGuardia Airport | New York City |
++-------------------+---------------+ */
+SELECT full_name, city FROM airports WHERE id = 4;

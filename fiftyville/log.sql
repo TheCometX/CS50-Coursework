@@ -68,3 +68,4 @@ SELECT name, phone_number, passport_number FROM people, bank_accounts, atm_trans
 WHERE atm_transactions.account_number = bank_accounts.account_number AND person_id = people.id
 AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
+

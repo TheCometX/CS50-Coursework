@@ -90,6 +90,17 @@ WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE yea
 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = 'exit'));
 
 
-
+/* flight id and airports id:
++----+-------------------+------------------------+
+| id | origin_airport_id | destination_airport_id |
++----+-------------------+------------------------+
+| 36 | 8                 | 4                      |
+| 43 | 8                 | 1                      |
++----+-------------------+------------------------+ */
 SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE year = 2023 AND month = 7
 AND day = 29 AND hour < 12;
+
+
+
+SELECT name FROM people, passengers WHERE people.passport_number = passengers.passport_number
+AND flight_id IN (SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12);

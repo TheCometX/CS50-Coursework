@@ -179,4 +179,6 @@ SELECT full_name, city FROM airports WHERE id = 4;
 
 
 
-SELECT name FROM people WHERE phone_number = '(113) 555-7544';
+SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60 AND receiver
+IN (SELECT phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce') OR caller IN (SELECT phone_number FROM people
+WHERE name = 'Luca' OR name = 'Bruce');

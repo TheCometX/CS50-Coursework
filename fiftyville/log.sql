@@ -102,25 +102,25 @@ AND day = 29 AND hour < 12;
 
 
 /* passengers:
-+---------+
-|  name   |
-+---------+
-| Doris   |
-| Sofia   |
-| Bruce   |
-| Edward  |
-| Kelsey  |
-| Taylor  |
-| Kenny   |
-| Luca    |
-| Daniel  |
-| Carol   |
-| Rebecca |
-| Sophia  |
-| Heather |
-| Marilyn |
-+---------+ */
-SELECT name FROM people, passengers WHERE people.passport_number = passengers.passport_number
++---------+-----------+
+|  name   | flight_id |
++---------+-----------+
+| Doris   | 36        |
+| Sofia   | 36        |
+| Bruce   | 36        |
+| Edward  | 36        |
+| Kelsey  | 36        |
+| Taylor  | 36        |
+| Kenny   | 36        |
+| Luca    | 36        |
+| Daniel  | 43        |
+| Carol   | 43        |
+| Rebecca | 43        |
+| Sophia  | 43        |
+| Heather | 43        |
+| Marilyn | 43        |
++---------+-----------+ */
+SELECT name, flight_id FROM people, passengers WHERE people.passport_number = passengers.passport_number
 AND flight_id IN (SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12);
 
 /* suspects:

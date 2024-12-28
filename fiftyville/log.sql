@@ -101,6 +101,25 @@ SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE year = 2
 AND day = 29 AND hour < 12;
 
 
-
+/* passengers:
++---------+
+|  name   |
++---------+
+| Doris   |
+| Sofia   |
+| Bruce   |
+| Edward  |
+| Kelsey  |
+| Taylor  |
+| Kenny   |
+| Luca    |
+| Daniel  |
+| Carol   |
+| Rebecca |
+| Sophia  |
+| Heather |
+| Marilyn |
++---------+ */
 SELECT name FROM people, passengers WHERE people.passport_number = passengers.passport_number
 AND flight_id IN (SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12);
+

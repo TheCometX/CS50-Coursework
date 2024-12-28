@@ -25,4 +25,17 @@ SELECT license_plate FROM bakery_security_logs WHERE year = 2023 AND month = 7
 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = 'exit';
 
 /* plates owner:
-*/
++---------+---------------+
+|  name   | license_plate |
++---------+---------------+
+| Vanessa | 5P2BI95       |
+| Barry   | 6P58WS2       |
+| Iman    | L93JTIZ       |
+| Sofia   | G412CB7       |
+| Luca    | 4328GD8       |
+| Diana   | 322W7JE       |
+| Kelsey  | 0NTHK55       |
+| Bruce   | 94KL13X       |
++---------+---------------+ */
+SELECT name, license_plate FROM people WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE year = 2023 AND month = 7
+AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = 'exit');

@@ -177,10 +177,3 @@ WHERE name = 'Luca' OR name = 'Bruce');
 +-------------------+---------------+ */
 SELECT full_name, city FROM airports WHERE id = 4;
 
-/*
-+--------+
-|  name  |
-+--------+
-| Andrea |
-+--------+ */
-SELECT name FROM people WHERE phone_number = '(368) 555-3561';

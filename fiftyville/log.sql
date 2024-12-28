@@ -8,4 +8,4 @@ SELECT id, street, description FROM crime_scene_reports WHERE day = 28 AND month
 -- Raymod ear his call that have a duration less than 1 minute, other person buy a fligth ticket for him in day 29/07/23
 SELECT name, transcript FROM interviews WHERE year = 2023 AND month = 7 AND day = 28;
 
-/* plates:
+/* license plates:

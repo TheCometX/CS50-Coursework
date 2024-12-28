@@ -123,7 +123,7 @@ AND day = 29 AND hour < 12;
 SELECT name, flight_id FROM people, passengers WHERE people.passport_number = passengers.passport_number
 AND flight_id IN (SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12);
 
-/* suspects:
+/* suspects (flight: 36):
 +-------+
 | name  |
 +-------+
@@ -152,12 +152,10 @@ SELECT caller, receiver FROM phone_calls WHERE year = 2023 AND month = 7 AND day
 IN (SELECT phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce') OR caller IN (SELECT phone_number FROM people
 WHERE name = 'Luca' OR name = 'Bruce');
 
-
-/* Find earlist flight (36)
-+----+------+--------+
-| id | hour | minute |
-+----+------+--------+
-| 36 | 8    | 20     |
-| 43 | 9    | 30     |
-+----+------+--------+ */
-SELECT id, hour, minute FROM flights WHERE id = 36 OR id = 43;
+/* dewstination of thief:
++-------------------+
+|     full_name     |
++-------------------+
+| LaGuardia Airport |
++-------------------+ */
+SELECT full_name FROM airports WHERE id = 4;

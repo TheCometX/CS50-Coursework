@@ -32,25 +32,3 @@ AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05;
 26013199 */
 SELECT account_number, amount FROM atm_transactions WHERE year = 2023 AND month = 7
 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
-
-
-/* possile airports id:
-origin = 8; destination = 4
-origin = 8; destination = 1 */
-SELECT origin_airport_id, destination_airport_id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12;
-
-/* airports info:
-+----+------------------------------+--------------+---------------+
-| id |          full_name           | abbreviation |     city      |
-+----+------------------------------+--------------+---------------+
-| 1  | O'Hare International Airport | ORD          | Chicago       |
-| 4  | LaGuardia Airport            | LGA          | New York City |
-| 8  | Fiftyville Regional Airport  | CSF          | Fiftyville    |
-+----+------------------------------+--------------+---------------+ */
-SELECT id, full_name, abbreviation, city FROM airports WHERE id = 8 OR id = 4 OR id = 1;
-
-/* suspects:
-
-*/
-SELECT name, phone_number, passport_number, license_plate FROM bank_account, people WHERE person_id = id AND bank_account.account_number IN (SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7
-AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')

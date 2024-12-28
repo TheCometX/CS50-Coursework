@@ -177,3 +177,6 @@ WHERE name = 'Luca' OR name = 'Bruce');
 +-------------------+---------------+ */
 SELECT full_name, city FROM airports WHERE id = 4;
 
+
+
+SELECT name FROM people WHERE phone_number = '(113) 555-7544';

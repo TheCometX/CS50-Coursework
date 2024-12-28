@@ -52,3 +52,5 @@ SELECT id, full_name, abbreviation, city FROM airports WHERE id = 8 OR id = 4 OR
 /* suspects:
 
 */
+SELECT name, phone_number, passport_number, license_plate FROM bank_account, people WHERE person_id = id AND bank_account.account_number IN (SELECT account_number FROM atm_transactions WHERE year = 2023 AND month = 7
+AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')

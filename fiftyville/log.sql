@@ -86,17 +86,22 @@ AND transaction_type = 'withdraw' AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05);
 
 
-
-(SELECT passport_number FROM people, bank_accounts, atm_transactions
-WHERE atm_transactions.account_number = bank_accounts.account_number AND person_id = people.id
-AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
-AND transaction_type = 'withdraw' AND license_plate IN (SELECT license_plate
-FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05));
-
-
-
+/* flights id:
++-----------+------+-----------------+
+| flight_id | seat | passport_number |
++-----------+------+-----------------+
+| 11        | 5D   | 8496433585      |
+| 18        | 4C   | 3592750733      |
+| 24        | 2C   | 3592750733      |
+| 26        | 2C   | 7049073643      |
+| 36        | 4A   | 5773159633      |
+| 36        | 7B   | 8496433585      |
+| 48        | 7C   | 8496433585      |
+| 54        | 6C   | 3592750733      |
++-----------+------+-----------------+ */
 SELECT flight_id, seat, passport_number FROM passengers WHERE passport_number IN (SELECT passport_number FROM people, bank_accounts, atm_transactions
 WHERE atm_transactions.account_number = bank_accounts.account_number AND person_id = people.id
 AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw' AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute < 25 AND minute > 05));
+

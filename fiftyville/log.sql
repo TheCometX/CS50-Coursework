@@ -75,7 +75,7 @@ AND transaction_type = 'withdraw';
 | name  |  phone_number  | passport_number |
 +-------+----------------+-----------------+
 | Bruce | (367) 555-5533 | 5773159633      |
-| Diana | (770) 555-1861 | 3592750733      |
+| Diana | (770) 555-1861 | 3592750733      | -> thief
 | Iman  | (829) 555-5269 | 7049073643      |
 | Luca  | (389) 555-5198 | 8496433585      |
 +-------+----------------+-----------------+ */
@@ -116,3 +116,7 @@ SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE year = 2
 
 -- thief is Diana
 SELECT name FROM people WHERE passport_number = 3592750733;
+
+-- Destination is Logan International Airport
+SELECT full_name FROM airports WHERE id = 6;
+

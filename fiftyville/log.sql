@@ -159,3 +159,4 @@ WHERE name = 'Luca' OR name = 'Bruce');
 | LaGuardia Airport | New York City |
 +-------------------+---------------+ */
 SELECT full_name, city FROM airports WHERE id = 4;
+

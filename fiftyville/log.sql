@@ -121,5 +121,4 @@ SELECT name FROM people WHERE passport_number = 3592750733;
 SELECT full_name FROM airports WHERE id = 6;
 
 -- Accomplice is
-SELECT name FROM people, phone_calls WHERE receiver = phone_number
-AND year = 2023 AND month = 7 AND day = 28 AND duration > 60 AND caller = '(770) 555-1861';
+SELECT * FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration > 60 AND caller = '(770) 555-1861';

@@ -123,3 +123,6 @@ AND day = 29 AND hour < 12;
 SELECT name FROM people, passengers WHERE people.passport_number = passengers.passport_number
 AND flight_id IN (SELECT id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12);
 
+/* suspects:
+*/
+SELECT

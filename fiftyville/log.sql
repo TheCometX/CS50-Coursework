@@ -109,7 +109,7 @@ FROM bakery_security_logs WHERE year = 2023 AND month = 7 AND day = 28 AND hour 
 +----+-------------------+------------------------+
 | id | origin_airport_id | destination_airport_id |
 +----+-------------------+------------------------+
-| 18 | 8                 | 6                      |
+| 18 | 8                 | 6                      | -> flight of thief
 | 53 | 8                 | 9                      |
 +----+-------------------+------------------------+ */
 SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE year = 2023 AND month = 7 AND day = 29 AND hour > 12;

@@ -120,3 +120,6 @@ SELECT name FROM people WHERE passport_number = 3592750733;
 -- Destination is Logan International Airport
 SELECT full_name FROM airports WHERE id = 6;
 
+-- Accomplice is
+SELECT name FROM people, phone_calls WHERE receiver = phone_number AND year = 2023 AND month = 7 AND day = 28 AND hour = 10 AND minute > 15
+AND minute < 25 AND caller = '(770) 555-1861';

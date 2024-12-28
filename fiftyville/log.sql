@@ -147,7 +147,24 @@ WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12));
 +-------+----------------+ */
 SELECT name, phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce';
 
-
+/*
++----------------+----------------+
+|     caller     |    receiver    |
++----------------+----------------+
+| (367) 555-5533 | (113) 555-7544 |
+| (389) 555-5198 | (368) 555-3561 |
+| (367) 555-5533 | (238) 555-5554 |
+| (367) 555-5533 | (660) 555-3095 |
+| (367) 555-5533 | (286) 555-0131 |
+| (367) 555-5533 | (375) 555-8161 |
+| (367) 555-5533 | (344) 555-9601 |
+| (367) 555-5533 | (022) 555-4052 |
+| (367) 555-5533 | (704) 555-5790 |
+| (389) 555-5198 | (609) 555-5876 |
+| (367) 555-5533 | (455) 555-5315 |
+| (367) 555-5533 | (841) 555-3728 |
+| (367) 555-5533 | (696) 555-9195 |
++----------------+----------------+ */
 SELECT caller, receiver FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60 AND receiver
 IN (SELECT phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce') OR caller IN (SELECT phone_number FROM people
 WHERE name = 'Luca' OR name = 'Bruce');
@@ -160,3 +177,10 @@ WHERE name = 'Luca' OR name = 'Bruce');
 +-------------------+---------------+ */
 SELECT full_name, city FROM airports WHERE id = 4;
 
+/*
++--------+
+|  name  |
++--------+
+| Andrea |
++--------+ */
+SELECT name FROM people WHERE phone_number = '(368) 555-3561';

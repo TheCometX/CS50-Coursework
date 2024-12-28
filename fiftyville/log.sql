@@ -88,3 +88,8 @@ SELECT name FROM people WHERE name IN (SELECT name FROM people, bank_accounts WH
 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw')) AND name IN (SELECT name FROM people
 WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs WHERE year = 2023 AND month = 7
 AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = 'exit'));
+
+
+
+SELECT id, origin_airport_id, destination_airport_id FROM flights WHERE year = 2023 AND month = 7
+AND day = 29 AND hour < 12;

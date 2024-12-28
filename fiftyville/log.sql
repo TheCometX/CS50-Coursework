@@ -138,5 +138,11 @@ AND day = 28 AND hour = 10 AND minute > 15 AND minute < 25 AND activity = 'exit'
 WHERE people.passport_number = passengers.passport_number AND flight_id IN (SELECT id FROM flights
 WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12));
 
-
-SELECT 
+/* suspects phone numbers:
++-------+----------------+
+| name  |  phone_number  |
++-------+----------------+
+| Luca  | (389) 555-5198 |
+| Bruce | (367) 555-5533 |
++-------+----------------+ */
+SELECT name, phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce';

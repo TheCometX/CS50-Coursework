@@ -146,3 +146,6 @@ WHERE year = 2023 AND month = 7 AND day = 29 AND hour < 12));
 | Bruce | (367) 555-5533 |
 +-------+----------------+ */
 SELECT name, phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce';
+
+
+SELECT 

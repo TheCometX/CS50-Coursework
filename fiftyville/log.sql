@@ -48,3 +48,7 @@ SELECT origin_airport_id, destination_airport_id FROM flights WHERE year = 2023 
 | 8  | Fiftyville Regional Airport  | CSF          | Fiftyville    |
 +----+------------------------------+--------------+---------------+ */
 SELECT id, full_name, abbreviation, city FROM airports WHERE id = 8 OR id = 4 OR id = 1;
+
+/* suspects:
+
+*/

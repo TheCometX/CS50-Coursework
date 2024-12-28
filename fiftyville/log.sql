@@ -151,3 +151,13 @@ SELECT name, phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce';
 SELECT caller, receiver FROM phone_calls WHERE year = 2023 AND month = 7 AND day = 28 AND duration < 60 AND receiver
 IN (SELECT phone_number FROM people WHERE name = 'Luca' OR name = 'Bruce') OR caller IN (SELECT phone_number FROM people
 WHERE name = 'Luca' OR name = 'Bruce');
+
+
+/* Find earlist flight (36)
++----+------+--------+
+| id | hour | minute |
++----+------+--------+
+| 36 | 8    | 20     |
+| 43 | 9    | 30     |
++----+------+--------+ */
+SELECT id, hour, minute FROM flights WHERE id = 36 OR id = 43;

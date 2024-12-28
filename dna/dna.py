@@ -31,17 +31,17 @@ def main():
         for a in alleles:
             allele_count.append(longest_match(sequence, a))
 
-    print(database)
-    print(alleles)
-    print(allele_count)
 
+    for row in database:
+        name = row[0]
+        row.remove(name)
+        if row[0].isdigit():
+            row = list(map(int, row))
+            if row == allele_count:
+                print(name)
+                return
+    print("No match")
     return
-
-
-
-
-
-
 
 
 

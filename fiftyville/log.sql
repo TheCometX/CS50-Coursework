@@ -70,7 +70,15 @@ AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
 
 
-
+/* Possible thiefs
++-------+----------------+-----------------+
+| name  |  phone_number  | passport_number |
++-------+----------------+-----------------+
+| Bruce | (367) 555-5533 | 5773159633      |
+| Diana | (770) 555-1861 | 3592750733      |
+| Iman  | (829) 555-5269 | 7049073643      |
+| Luca  | (389) 555-5198 | 8496433585      |
++-------+----------------+-----------------+ */
 SELECT name, phone_number, passport_number FROM people, bank_accounts, atm_transactions
 WHERE atm_transactions.account_number = bank_accounts.account_number AND person_id = people.id
 AND year = 2023 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'

@@ -6,14 +6,14 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            let incorrect = querySelectorAll("#incorrect");
+            let incorrect = querySelectorAll(".incorrect");
 
             for (let x = 0; x < incorrect.length; x++) {
                 let button = incorrect[x];
 
                 button.addEventListener('click', function() {
                     button.style.backgroundColor = 'red';
-                    querySelector("status").innerHTML = 'Incorrect';
+                    querySelector("#status").innerHTML = 'Incorrect';
                 });
             }
 
@@ -30,11 +30,11 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <h3>What is the square root of 256?</h3>
-                <button id="incorrect">12</button>
-                <button id="incorrect">13</button>
-                <button id="incorrect">14</button>
-                <button id="incorrect">15</button>
-                <button id="correct"">16</button>
+                <button class="incorrect">12</button>
+                <button class="incorrect">13</button>
+                <button class="incorrect">14</button>
+                <button class="incorrect">15</button>
+                <button class="correct"">16</button>
                 <p id="status"></p>
             </div>
 

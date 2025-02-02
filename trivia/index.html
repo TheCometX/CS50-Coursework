@@ -7,11 +7,16 @@
         <title>Trivia!</title>
         <script>
             let incorrect = querySelectorAll("#incorrect");
-            incorrect.addEventListener('click', function() {
-                for (let x = 0; x < incorrect.length; x++) {
-                    
-                }
-            });
+
+            for (let x = 0; x < incorrect.length; x++) {
+                let button = incorrect[x];
+
+                button.addEventListener('click', function() {
+                    button.style.backgroundColor = 'red';
+                    querySelector("status").innerHtml
+                });
+            }
+
 
         </script>
     </head>
@@ -30,6 +35,7 @@
                 <button id="incorrect">14</button>
                 <button id="incorrect">15</button>
                 <button id="correct"">16</button>
+                <p id="status"></p>
             </div>
 
             <div class="section">

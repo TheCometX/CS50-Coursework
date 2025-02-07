@@ -6,17 +6,14 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            let incorrect = querySelectorAll(".incorrect");
+            let incorrect = querySelectorAll('.incorrect');
+            let correct = querySelector('.correct');
+            let message = querySelector('#message');
 
-            for (let x = 0; x < incorrect.length; x++) {
-                let button = incorrect[x];
-
-                button.addEventListener('click', function() {
-                    button.style.backgroundColor = 'red';
-                    querySelector("#status").innerHTML = 'Incorrect';
-                });
+            correct.onclick = function () {
+                correct.style.backgroundColor = 'red';
+                message.innerHTML = 'Correct';
             }
-
 
         </script>
     </head>
@@ -35,7 +32,7 @@
                 <button class="incorrect">14</button>
                 <button class="incorrect">15</button>
                 <button class="correct"">16</button>
-                <p id="status"></p>
+                <p id="message"></p>
             </div>
 
             <div class="section">

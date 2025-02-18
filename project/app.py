@@ -10,4 +10,10 @@ def index():
 def test():
     return render_template("questions.html")
 
+@app.route("/rank")
+def rank():
+    return render_template("rank.html")
 
+@app.route("/login")
+def login():
+    return render_template("login.html")

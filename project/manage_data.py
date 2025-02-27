@@ -5,5 +5,4 @@ class Questions:
 
         database = sqlite3.connect('')
 
-        
-
+with open()

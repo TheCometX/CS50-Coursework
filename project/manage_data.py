@@ -1,12 +1,19 @@
-import json
-import sqlite3
+def questions():
+    import json
+    from random import choice
 
+    questionList = []
 
-class Questions:
-    def add_questions():
-        database = sqlite3.connect('')
+    with open('trivia_api.json', 'r') as file:
+        questions = json.load(file)
+        for x in range(10):
+            question = choice(questions["results"])
+            questionList.append(Question(question["question"], list(question["correct_answer"]) + question["incorrect_answers"], question["correct_answer"]))
 
-with open('trivia_api.json', 'r') as file:
-    data = json.load(file)
-    for x in data['results']:
-        print(x)
+        return questionList
+
+class Question:
+    def __init__(self, question, answers, correct):
+        self._question = question
+        self._answers = answers
+        self._correct = correct

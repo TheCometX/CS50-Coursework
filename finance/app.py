@@ -115,7 +115,7 @@ def register():
     if request.method == "POST":
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-        if confirmation == password:
+        if confirmation == password and (confirmation != "" and password != ""):
             username = request.form.get("username")
             hash = generate_password_hash(password)
             print(username)
@@ -124,7 +124,7 @@ def register():
             except ValueError:
                 return apology("Username in use")
         else:
-            return apology("Invalid pass")
+            return apology("Invalid password input")
     return render_template("register.html")
 
 @app.route("/sell", methods=["GET", "POST"])

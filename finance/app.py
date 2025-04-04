@@ -123,6 +123,8 @@ def register():
                 db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, hash)
             except ValueError:
                 return apology("Username in use")
+        else:
+            return apology("Invalid pass")
     return render_template("register.html")
 
 @app.route("/sell", methods=["GET", "POST"])

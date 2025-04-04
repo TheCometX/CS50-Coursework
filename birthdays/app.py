@@ -27,13 +27,17 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-
+        name = request.form.get("name")
+        birth = request.form.get("birth")
+        month = int(birth[5:7])
+        day = int(birth[8:10])
+        db.execute("INSERT INTO birthdays(name, month, day) VALUES (?, ?, ?)", name, month, day)
         return redirect("/")
 
     else:
 
         # TODO: Display the entries in the database on index.html
-
-        return render_template("index.html")
+        list = db.execute("SELECT name, month, day FROM birthdays")
+        return render_template("index.html", list=list)
 
 

@@ -118,11 +118,13 @@ def register():
         if confirmation == password and (confirmation != "" and password != ""):
             username = request.form.get("username")
             hash = generate_password_hash(password)
-            print(username)
-            try:
-                db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, hash)
-            except ValueError:
-                return apology("Username in use")
+            if username != "":
+                try:
+                    db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, hash)
+                except ValueError:
+                    return apology("Username in use")
+            else:
+                return apology("Invalid username input")
         else:
             return apology("Invalid password input")
     return render_template("register.html")

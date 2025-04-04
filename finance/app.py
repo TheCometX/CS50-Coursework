@@ -117,10 +117,10 @@ def register():
         confirmation = request.form.get("confirmation")
         if confirmation == password:
             username = request.form.get("username")
-            hash = 
+            hash = generate_password_hash(password)
             print(username)
             try:
-                db.execute("INSERT INTO users(username) VALUES ?", username)
+                db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, hash)
             except ValueError:
                 return apology("Username in use")
     return render_template("register.html")

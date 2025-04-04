@@ -114,6 +114,7 @@ def register():
     """Register user"""
     if request.method == "POST":
         username = request.form.get('username')
+        print(username)
         try:
             db.execute("INSERT INTO users(username) VALUES ?", username)
         except ValueError:

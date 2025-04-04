@@ -113,12 +113,15 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-        username = request.form.get('username')
-        print(username)
-        try:
-            db.execute("INSERT INTO users(username) VALUES ?", username)
-        except ValueError:
-            return apology("Username in use")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+        if confirmation == password:
+            username = request.form.get("username")
+            print(username)
+            try:
+                db.execute("INSERT INTO users(username) VALUES ?", username)
+            except ValueError:
+                return apology("Username in use")
     return render_template("register.html")
 
 @app.route("/sell", methods=["GET", "POST"])

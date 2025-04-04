@@ -117,6 +117,7 @@ def register():
         confirmation = request.form.get("confirmation")
         if confirmation == password:
             username = request.form.get("username")
+            hash = 
             print(username)
             try:
                 db.execute("INSERT INTO users(username) VALUES ?", username)

@@ -47,7 +47,8 @@ def buy():
         if information is not None:
             try:
                 shares = int(request.form.get("shares"))
-
+            except ValueError:
+                return apology(")
 
 
 @app.route("/history")

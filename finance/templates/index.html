@@ -20,7 +20,7 @@
                     <td>{{ stock["symbol"] }}</td>
                     <td>{{ stock["COUNT(shares)"] }}</td>
                     <td>{{ stock["stockprice"] }}</td>
-                    <td>{{ stock["SUM(price)"] }}</td>
+                    <td>{{ 3 * stock["stockprice"] }}</td>
                 </tr>
             {% endfor %}
             <tr>

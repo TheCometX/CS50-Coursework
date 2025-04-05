@@ -48,7 +48,9 @@ def buy():
             try:
                 shares = int(request.form.get("shares"))
             except ValueError:
-                return apology(")
+                return apology("Invalid number of shares")
+    else:
+        return apology("Invalid stock's symbol")
 
 
 @app.route("/history")

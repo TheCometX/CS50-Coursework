@@ -35,7 +35,8 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    stocks = db.execute("SELECT dis")
+    stocks = db.execute("SELECT symbol, COUNT(shares), COUNT(price) FROM history WHERE userID = ? GROUP BY symbol", session.get("user_id"))
+    print(stocks)
     return render_template("index.html")
 
 

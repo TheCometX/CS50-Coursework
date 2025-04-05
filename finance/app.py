@@ -53,6 +53,7 @@ def buy():
                 if balance > price:
                     balance -= price
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
+                    db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, )
             except ValueError:
                 return apology("Invalid number of shares")
     else:

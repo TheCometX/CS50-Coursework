@@ -43,7 +43,11 @@ def index():
 def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        
+        information = lookup(symbol)
+        if information is not None:
+            try:
+                shares = int(request.form.get("shares"))
+
 
 
 @app.route("/history")

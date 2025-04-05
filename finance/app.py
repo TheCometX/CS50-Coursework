@@ -50,7 +50,9 @@ def buy():
                 shares = int(request.form.get("shares"))
                 price = information["price"] * shares
                 userID = session.get("user_id")
-                balance = db.execute("SELECT cash FROM users WHERE id = ?", userID)
+                balance = db.execute("SELECT cash FROM users WHERE id = ?", userID)["cash"]
+                print(balance)
+                return redirect("/")
                 if balance > price:
                     balance -= price
                     dateTime = datetime.now("%d-%m-%y %H:%M:%S")

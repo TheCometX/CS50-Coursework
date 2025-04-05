@@ -56,6 +56,7 @@ def buy():
                     dateTime = datetime.now()
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
                     db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, dateTime, userID)
+                    return redirect("/")
             except ValueError:
                 return apology("Invalid number of shares")
         else:

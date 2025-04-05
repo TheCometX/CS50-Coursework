@@ -53,13 +53,14 @@ def buy():
                 balance = db.execute("SELECT cash FROM users WHERE id = ?", userID)
                 if balance > price:
                     balance -= price
-                    dateTime = datetime.now("")
+                    dateTime = datetime.now("%d-%m-%y %H:%M:%S")
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
-                    db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, )
+                    db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, dateTime, userID)
             except ValueError:
                 return apology("Invalid number of shares")
-    else:
-        return apology("Invalid stock's symbol")
+        else:
+            return apology("Invalid stock's symbol")
+    return render_template("buy.html")
 
 
 @app.route("/history")

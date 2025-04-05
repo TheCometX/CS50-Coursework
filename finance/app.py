@@ -53,7 +53,7 @@ def buy():
                 balance = db.execute("SELECT cash FROM users WHERE id = ?", userID)[0]["cash"]
                 if balance > price:
                     balance -= price
-                    dateTime = datetime.now("%d-%m-%y %H:%M:%S")
+                    dateTime = datetime.now()
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
                     db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, dateTime, userID)
             except ValueError:

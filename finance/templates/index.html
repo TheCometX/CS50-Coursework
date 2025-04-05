@@ -15,11 +15,25 @@
             </tr>
         </thead>
         <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["COUNT(shares)"] }}</td>
+                    <td>{{ stock["SUM(price)"] / stock["COUNT(shares)"] }}</td>
+                    <td>{{ stock["SUM(price)"] }}</td>
+                </tr>
+            {% endfor %}
             <tr>
-                <td>{{ symbol }}</td>
-                <td>{{ name }}</td>
-                <td>{{ price }}</td>
                 <td></td>
+                <td></td>
+                <th>Cash</th>
+                <td>{{ balance }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>Total</th>
+                <td>{{ balance + </td>
             </tr>
         </tbody>
     </table>

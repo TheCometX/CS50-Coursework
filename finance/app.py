@@ -47,6 +47,7 @@ def buy():
         if information is not None:
             try:
                 shares = int(request.form.get("shares"))
+                
             except ValueError:
                 return apology("Invalid number of shares")
     else:

@@ -40,7 +40,7 @@ def index():
     total = 0
     for row in stocks:
         total += row["SUM(price)"]
-        
+        row["total"] = round(row["SUM(price)"] / row["COUNT(shares)"], 2)
     return render_template("index.html", stocks=stocks, balance=balance, total=total)
 
 

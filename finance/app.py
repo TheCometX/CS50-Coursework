@@ -110,7 +110,7 @@ def quote():
         informations = lookup(symbol)
         name = informations["name"]
         price = informations["price"]
-        return render_template("quoted.html", name=)
+        return render_template("quoted.html", symbol=symbol, name=name, price=price)
     return render_template("quote.html")
 
 

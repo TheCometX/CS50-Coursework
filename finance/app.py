@@ -37,7 +37,10 @@ def after_request(response):
 def index():
     stocks = db.execute("SELECT symbol, COUNT(shares), SUM(price) FROM history WHERE userID = ? GROUP BY symbol", session.get("user_id"))
     balance = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))[0]["cash"]
-    return render_template("index.html", stocks=stocks, balance=balance)
+    total = 0
+    for row in stocks:
+        total += row["SUM(price)"]
+    return render_template("index.html", stocks=stocks, balance=balance, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])

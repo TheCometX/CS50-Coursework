@@ -56,7 +56,7 @@ def buy():
                 userID = session.get("user_id")
                 balance = db.execute("SELECT cash FROM users WHERE id = ?", userID)[0]["cash"]
                 if balance > price:
-                    balance -= price
+                    balance = round(balance - price, 2)
                     dateTime = datetime.now()
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
                     db.execute("INSERT INTO history(shares, price, date, userID, symbol) VALUES (?, ?, ?, ?, ?)", shares, price, dateTime, userID, symbol)

@@ -35,7 +35,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    stocks = db.execute("SELECT )
+    stocks = db.execute("SELECT dis")
     return render_template("index.html")
 
 
@@ -55,7 +55,7 @@ def buy():
                     balance -= price
                     dateTime = datetime.now()
                     db.execute("UPDATE users SET cash = ? WHERE id = ?", balance, userID)
-                    db.execute("INSERT INTO history(shares, price, date, userID) VALUES (?, ?, ?, ?)", shares, price, dateTime, userID)
+                    db.execute("INSERT INTO history(shares, price, date, userID, symbol) VALUES (?, ?, ?, ?, ?)", shares, price, dateTime, userID, symbol)
                     return redirect("/")
             except ValueError:
                 return apology("Invalid number of shares")

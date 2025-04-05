@@ -48,7 +48,9 @@ def buy():
             try:
                 shares = int(request.form.get("shares"))
                 price = information["price"] * shares
-                balance = db.execute("SELECT cash FROM users WHERE username = ?", )
+                balance = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
+                if balance > price:
+                    balance -= 
             except ValueError:
                 return apology("Invalid number of shares")
     else:

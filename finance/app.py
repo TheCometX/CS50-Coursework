@@ -40,6 +40,7 @@ def index():
     total = 0
     for row in stocks:
         total += row["SUM(price)"]
+        
     return render_template("index.html", stocks=stocks, balance=balance, total=total)
 
 

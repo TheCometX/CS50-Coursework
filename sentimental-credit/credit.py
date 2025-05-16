@@ -1,16 +1,16 @@
 def check(cardNum: str) -> bool:
-    result: int = 0
-    for x in range(len(cardNum)):
-        if x % 2 == 1:
-            number = int(cardNum[x]) * 2
-            for digit in str(number):
-                result += int(digit)
+    result = 0
+    length = len(cardNum)
+    for x in range(1, length + 1):
+        digit = int(cardNum[length - x])
+        if x % 2 == 0:
+            digit *= 2
+            result += digit // 10 + digit % 10
         else:
-            result += int(cardNum[x])
+            result += digit
     if result % 10 == 0:
         return True
-    else:
-        return False
+    return False
 
 def type(cardNum: str) -> str:
     length: int = len(cardNum)

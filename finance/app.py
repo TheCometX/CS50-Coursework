@@ -59,7 +59,7 @@ def buy():
             return apology("Shares should be a number")
         if shares < 0 or shares % 1 != 0:
             return apology("Shares should be a integer higher than 0")
-        symbol.upper()
+        symbol = symbol.upper()
         stock = lookup(symbol)
         if stock == None:
             return apology("Stock symbol doesn't exist")
@@ -71,6 +71,7 @@ def buy():
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", price, id)
         dateTime = datetime.now()
         db.execute("INSERT INTO history(date, type, price, stockSymbol, userID, shares) VALUES (?, 'buy', ?, ?, ?, ?)", dateTime, price, symbol, id, shares)
+        print(symbol)
         stocksOwen = db.execute("SELECT amount FROM stocks WHERE userID = ? AND symbol = ?", id, symbol)
         if len(stocksOwen) == 0:
             db.execute("INSERT INTO stocks(symbol, amount, userID) VALUES (?, ?, ?)", symbol, shares, id)

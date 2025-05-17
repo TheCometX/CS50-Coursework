@@ -59,6 +59,7 @@ def buy():
             return apology("Shares should be a number")
         if shares < 0 or shares % 1 != 0:
             return apology("Shares should be a integer higher than 0")
+        symbol.upper()
         stock = lookup(symbol)
         if stock == None:
             return apology("Stock symbol doesn't exist")
@@ -138,10 +139,10 @@ def logout():
 @login_required
 def quote():
     if request.method == "POST":
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         information = lookup(symbol)
         if information != None:
-            return render_template("quoted.html", symbol=symbol, company=information["name"], price=round(information["price"]))
+            return render_template("quoted.html", symbol=symbol, company=information["name"], price=round(information["price"], 2))
         return apology("Invalid symbol input")
     return render_template("quote.html")
 

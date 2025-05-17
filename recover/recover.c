@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1], "r");
 
     uint8_t buffer[512];
-    char* filename = malloc(sizeof(char) * 7);
+    char* filename = malloc(sizeof(int) * 3 + sizeof(char) * 4);
     int files = 0;
     int writing = 0;
     FILE* img;

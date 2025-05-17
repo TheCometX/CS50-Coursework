@@ -18,11 +18,11 @@
             {% for stock in stocks %}
                 <tr>
                     <td class="text-start">{{ stock["symbol"] }}</td>
-                    <td class="text-end">{{ stock["symbol"] }}</td>
-                    <td class="text-end">${{ stock["symbol"] }}</td>
-                    <td class="text-end">${{ stock["symbol"] }}</td>
+                    <td class="text-end">{{ stock["amount"] }}</td>
+                    <td class="text-end">${{ stock["price"] }}</td>
+                    <td class="text-end">${{ stock["total"] }}</td>
                 </tr>
-
+            {% endfor %}
         </tbody>
         <tfoot>
             <tr>

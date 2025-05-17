@@ -15,12 +15,12 @@
             </tr>
         </thead>
        <tbody>
-
+            {% for stock in stocks %}
                 <tr>
-                    <td class="text-start">{{  }}</td>
-                    <td class="text-end">{{  }}</td>
-                    <td class="text-end">${{  }}</td>
-                    <td class="text-end">${{  }}</td>
+                    <td class="text-start">{{ stock["symbol"] }}</td>
+                    <td class="text-end">{{ stock["symbol"] }}</td>
+                    <td class="text-end">${{ stock["symbol"] }}</td>
+                    <td class="text-end">${{ stock["symbol"] }}</td>
                 </tr>
 
         </tbody>

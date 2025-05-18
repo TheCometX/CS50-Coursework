@@ -5,20 +5,5 @@
 {% endblock %}
 
 {% block main %}
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Symbol</th>
-                <th>Company</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{ symbol }}</td>
-                <td>{{ company }}</td>
-                <td>{{ price }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <p>A share of {{ company }} ({{ symbol }}) costs ${{ price }}</p>
 {% endblock %}

@@ -57,7 +57,7 @@ def buy():
                 return apology("Invalid number of shares")
         except ValueError:
             return apology("Shares should be integer")
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", )
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     return render_template("buy.html")
 
 @app.route("/history")

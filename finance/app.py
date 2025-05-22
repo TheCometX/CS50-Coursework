@@ -35,7 +35,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
+    stocks = db.execute("SELECT stockSymbol, shares FROM portfolio WHERE userID = ?", session["user_id"])
     return render_template("index.html")
 
 

@@ -44,9 +44,20 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         stock = lookup(symbol)
+        try:
+            db.execute("INSERT INTO stocks(symbol, company) VALUES (?, ?)", stock["symbol"], stock["name"])
+        except sqlite3.IntegrityError:
+            pass
         if stock == None:
             return apology("Invalid symbol")
-        shares = request.form.get
+        shares = request.form.get("shares")
+        try:
+            shares = int(shares)
+            if shares < 0:
+                return apology("Invalid number of shares")
+        except ValueError:
+            return apology("Shares should be integer")
+        
     return render_template("buy.html")
 
 @app.route("/history")

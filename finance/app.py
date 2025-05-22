@@ -64,7 +64,7 @@ def buy():
             return apology("Don't have enough money")
         dateTime = datetime.now()
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", price, session["user_id"])
-        db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, "Buy", ?, ?, ?, ?)", session["user_id"], stock["symbol"], price, shares, dateTime)
+        db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, 'Buy', ?, ?, ?, ?)", session["user_id"], stock["symbol"], price, shares, dateTime)
         update = db.execute("UPDATE portfolio SET shares = shares + ? WHERE userID = ? AND stockSymbol = ?", shares, session["user_id"], stock["symbol"])
         if update == 0:
             db.execute("INSERT INTO portfolio(userID, shares, stockSymbol) VALUES (?, ?, ?)", session["user_id"], shares, stock["symbol"])

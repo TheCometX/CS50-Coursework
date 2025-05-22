@@ -51,12 +51,12 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         stock = lookup(symbol)
+        if stock == None:
+            return apology("Invalid symbol")
         try:
             db.execute("INSERT INTO stocks(symbol, company) VALUES (?, ?)", stock["symbol"], stock["name"])
         except ValueError:
             pass
-        if stock == None:
-            return apology("Invalid symbol")
         shares = request.form.get("shares")
         try:
             shares = int(shares)

@@ -1,6 +1,7 @@
 import os
 
 from cs50 import SQL
+from datetime import datetime
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -61,7 +62,9 @@ def buy():
         price = shares * stock["price"]
         if cash < price:
             return apology("Don't have enough money")
-        
+        dateTime =
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", price, session["user_id"])
+        db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, "Buy", ?, ?, ?, ?)", session["user_id"], stock["symbol"], price, shares, dateTime)
     return render_template("buy.html")
 
 @app.route("/history")

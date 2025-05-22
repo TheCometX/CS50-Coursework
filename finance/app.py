@@ -42,7 +42,11 @@ def index():
 @login_required
 def buy():
     if request.method == "POST":
-
+        symbol = request.form.get("symbol")
+        stock = lookup(symbol)
+        if stock == None:
+            return apology("Invalid symbol")
+        shares = request.form.get
     return render_template("buy.html")
 
 @app.route("/history")

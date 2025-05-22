@@ -46,7 +46,7 @@ def buy():
         stock = lookup(symbol)
         try:
             db.execute("INSERT INTO stocks(symbol, company) VALUES (?, ?)", stock["symbol"], stock["name"])
-        except:
+        except ValueError:
             pass
         if stock == None:
             return apology("Invalid symbol")

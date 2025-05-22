@@ -58,7 +58,10 @@ def buy():
         except ValueError:
             return apology("Shares should be integer")
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
-        print(cash)
+        price = shares * stock["price"]
+        if cash < price:
+            return apology("Don't have enough money")
+        
     return render_template("buy.html")
 
 @app.route("/history")

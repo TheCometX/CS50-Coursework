@@ -74,15 +74,15 @@ def buy():
         update = db.execute("UPDATE portfolio SET shares = shares + ? WHERE userID = ? AND stockSymbol = ?", shares, session["user_id"], stock["symbol"])
         if update == 0:
             db.execute("INSERT INTO portfolio(userID, shares, stockSymbol) VALUES (?, ?, ?)", session["user_id"], shares, stock["symbol"])
+        flash("Bought!")
         return redirect("/")
     return render_template("buy.html")
 
 @app.route("/history")
 @login_required
 def history():
-    """Show history of transactions"""
-    return apology("TODO")
-
+    transactions = db.execute("SELECT type, stockSymbol, price, shares, dateTime FROM history WHERE userID = ? ORDER BY dateTime DESC", session["user_id"])
+    return render_template("history.html", transactions=transactions)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

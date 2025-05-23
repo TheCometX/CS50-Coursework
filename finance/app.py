@@ -35,7 +35,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    stocks = db.execute("SELECT stockSymbol, shares FROM portfolio WHERE userID = ?", session["user_id"])
+    stocks = db.execute("SELECT stockSymbol, shares FROM portfolio WHERE userID = ? AND shares != 0", session["user_id"])
     total = balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
     for stock in stocks:
         stockInfo = lookup(stock["stockSymbol"])
@@ -187,7 +187,7 @@ def sell():
                 return apology("Invalid number of shares")
         except ValueError:
             return apology("Shares must be numeric")
-        sharesBought = db.execute("SELECT shares FROM portfolio WHERE userID = ? AND stockSymbol = ?", session["user_id"], symbol)
+        sharesBought = db.execute("SELECT shares FROM portfolio WHERE userID = ? AND stockSymbol = ?", session["user_id"], symbol)[0]["shares"]
         if sharesBought < shares:
             return apology("You don't have enough shares")
         stock = lookup(symbol)
@@ -196,4 +196,5 @@ def sell():
         db.execute("UPDATE portfolio SET shares = shares - ? WHERE userID = ? AND stockSymbol = ?", shares, session["user_id"], symbol)
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", price, session["user_id"])
         db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], "Sell", symbol, price, shares, dateTime)
+        return redirect("/")
     return render_template("sell.html", symbols=symbols)

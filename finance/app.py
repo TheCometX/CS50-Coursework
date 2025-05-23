@@ -196,5 +196,6 @@ def sell():
         db.execute("UPDATE portfolio SET shares = shares - ? WHERE userID = ? AND stockSymbol = ?", shares, session["user_id"], symbol)
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", price, session["user_id"])
         db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], "Sell", symbol, price, shares, dateTime)
+        flash("Sold!")
         return redirect("/")
     return render_template("sell.html", symbols=symbols)

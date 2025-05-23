@@ -189,4 +189,7 @@ def sell():
         sharesBought = db.execute("SELECT shares FROM portfolio WHERE userID = ? AND stockSymbol = ?", session["user_id"], symbol)
         if sharesBought < shares:
             return apology("You don't have enough shares")
-        
+        stock = lookup(symbol)
+        price = stock["price"] * shares
+        dateTime = datetime.now()
+        db.execute()

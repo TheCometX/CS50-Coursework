@@ -175,6 +175,7 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    symbols = db.execute("SELECT stockSymbol FROM portfolio WHERE shares != 0 AND userID = ?", session["user_id"])
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if symbol == "":
@@ -192,4 +193,7 @@ def sell():
         stock = lookup(symbol)
         price = stock["price"] * shares
         dateTime = datetime.now()
-        db.execute()
+        db.execute("UPDATE portfolio SET shares = shares - ? WHERE userID = ? AND stockSymbol = ?", shares, session["user_id"], symbol)
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", price, session["user_id"])
+        db.execute("INSERT INTO history(userID, type, stockSymbol, price, shares, dateTime) VALUES (?, ?, ?, ?, ?, ?)", session["user_id"], "Sell", symbol, price, shares, dateTime)
+    return render_template("sell.html", symbols=symbols)

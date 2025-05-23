@@ -175,5 +175,18 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        if symbol == "":
+            return apology("Select a symbol")
+        shares = request.form.get("shares")
+        try:
+            shares = int(shares)
+            if shares < 0:
+                return apology("Invalid number of shares")
+        except ValueError:
+            return apology("Shares must be numeric")
+        sharesBought = db.execute("SELECT shares FROM portfolio WHERE userID = ? AND stockSymbol = ?", session["user_id"], symbol)
+        if sharesBought < shares:
+            return apology("You don't have enough shares")
+        
